@@ -1,0 +1,1069 @@
+*****ubuntu@Ubuntu-GUI:~$ export GITHUB_USERNAME=KhotAbuch
+ubuntu@Ubuntu-GUI:~$ export GITHUB_TOKEN=*****
+ubuntu@Ubuntu-GUI:~$  cd ${GITHUB_USERNAME}/workspace
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ pushd .
+~/KhotAbuch/workspace ~/KhotAbuch/workspace
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ source scripts/activate
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ \curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles
+Turning on ignore dotfiles mode.
+Downloading https://github.com/rvm/rvm/archive/master.tar.gz
+Upgrading the RVM installation in /home/ubuntu/.rvm/
+    Fixing environment for ruby-2.4.2.
+    Installing rvm gem in 1 gemsetsError running 'command gem install /home/ubuntu/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-document',
+please read /home/ubuntu/.rvm/log/1749260873_ruby-2.4.2/gem.install.rvm->=1.11.3.9.log
+.
+    Installing gem-wrappers gem in 1 gemsetsError running 'command gem install /home/ubuntu/.rvm/gem-cache/gem-wrappers-1.4.0.gem --local --no-document',
+please read /home/ubuntu/.rvm/log/1749260873_ruby-2.4.2/gem.install.gem-wrappers->=1.4.0.log
+.
+    Regenerating gem wrappers in 1 rubiesERROR:  While executing gem ... (OptionParser::InvalidOption)
+    invalid option: --only-plugins
+ERROR:  While executing gem ... (Gem::CommandLineError)
+    Unknown command wrappers
+ERROR:  While executing gem ... (OptionParser::InvalidOption)
+    invalid option: --only-plugins
+ERROR:  While executing gem ... (Gem::CommandLineError)
+    Unknown command wrappers
+.
+Upgrade of RVM in /home/ubuntu/.rvm/ is complete.
+
+Thanks for installing RVM 🙏
+Please consider donating to our open collective to help us maintain RVM.
+
+👉  Donate: https://opencollective.com/rvm/donate
+
+
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ \curl -sSL https://get.rvm.io | bash -s stable
+Downloading https://github.com/rvm/rvm/archive/1.29.12.tar.gz
+Downloading https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc
+gpg: Signature made Fri Jan 15 21:46:22 2021 MSK
+gpg:                using RSA key 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+gpg: Can't check signature: No public key
+GPG signature verification failed for '/home/ubuntu/.rvm/archives/rvm-1.29.12.tgz' - 'https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc'! Try to install GPG v2 and then fetch the public key:
+
+    gpg2 --keyserver hkp://keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+or if it fails:
+
+    command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+    command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+
+In case of further problems with validation please refer to https://rvm.io/rvm/security
+
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm reinstall ruby-2.4.2
+Command 'rvm' not found, but there are 18 similar ones.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ sudo rm -rf ~/.rvm
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ sudo rm -rf /etc/rvmrc
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ sudo rm -rf ~/.rvmrc
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ sudo apt update
+Get:1 https://download.docker.com/linux/ubuntu noble InRelease [48.8 kB]
+Hit:2 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Get:3 https://download.docker.com/linux/ubuntu noble/stable arm64 Packages [25.7 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease [126 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease [126 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease [126 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 Packages [1127 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports noble-updates/main Translation-en [237 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 Components [159 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 Packages [1047 kB]
+Get:11 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe Translation-en [274 kB]
+Get:12 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 Components [375 kB]
+Get:13 http://ports.ubuntu.com/ubuntu-ports noble-updates/restricted arm64 Packages [1442 kB]
+Get:14 http://ports.ubuntu.com/ubuntu-ports noble-updates/restricted Translation-en [243 kB]
+Get:15 http://ports.ubuntu.com/ubuntu-ports noble-updates/restricted arm64 Components [212 B]
+Get:16 http://ports.ubuntu.com/ubuntu-ports noble-updates/multiverse arm64 Components [212 B]
+Get:17 http://ports.ubuntu.com/ubuntu-ports noble-backports/main arm64 Components [3584 B]
+Get:18 http://ports.ubuntu.com/ubuntu-ports noble-backports/universe arm64 Components [16.4 kB]
+Get:19 http://ports.ubuntu.com/ubuntu-ports noble-backports/restricted arm64 Components [212 B]
+Get:20 http://ports.ubuntu.com/ubuntu-ports noble-backports/multiverse arm64 Components [212 B]
+Get:21 http://ports.ubuntu.com/ubuntu-ports noble-security/main arm64 Packages [881 kB]
+Get:22 http://ports.ubuntu.com/ubuntu-ports noble-security/main Translation-en [159 kB]
+Get:23 http://ports.ubuntu.com/ubuntu-ports noble-security/main arm64 Components [18.4 kB]
+Get:24 http://ports.ubuntu.com/ubuntu-ports noble-security/universe arm64 Packages [816 kB]
+Get:25 http://ports.ubuntu.com/ubuntu-ports noble-security/universe Translation-en [185 kB]
+Get:26 http://ports.ubuntu.com/ubuntu-ports noble-security/universe arm64 Components [52.3 kB]
+Get:27 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted arm64 Packages [1404 kB]
+Get:28 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted Translation-en [236 kB]
+Get:29 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted arm64 Components [212 B]
+Get:30 http://ports.ubuntu.com/ubuntu-ports noble-security/multiverse arm64 Components [212 B]
+Fetched 9132 kB in 2s (3888 kB/s)                                  
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+120 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ sudo apt install -y curl gpg gnupg2 software-properties-common
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.6).
+gpg is already the newest version (2.4.4-2ubuntu17.2).
+gpg set to manually installed.
+gnupg2 is already the newest version (2.4.4-2ubuntu17.2).
+The following packages were automatically installed and are no longer required:
+  bridge-utils ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  python3-software-properties software-properties-gtk
+The following packages will be upgraded:
+  python3-software-properties software-properties-common software-properties-gtk
+3 upgraded, 0 newly installed, 0 to remove and 117 not upgraded.
+Need to get 127 kB of archives.
+After this operation, 5120 B of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 software-properties-common all 0.99.49.2 [14.4 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 software-properties-gtk all 0.99.49.2 [83.2 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 python3-software-properties all 0.99.49.2 [29.8 kB]
+Fetched 127 kB in 1s (156 kB/s)                     
+(Reading database ... 236727 files and directories currently installed.)
+Preparing to unpack .../software-properties-common_0.99.49.2_all.deb ...
+Unpacking software-properties-common (0.99.49.2) over (0.99.49.1) ...
+Preparing to unpack .../software-properties-gtk_0.99.49.2_all.deb ...
+Unpacking software-properties-gtk (0.99.49.2) over (0.99.49.1) ...
+Preparing to unpack .../python3-software-properties_0.99.49.2_all.deb ...
+Unpacking python3-software-properties (0.99.49.2) over (0.99.49.1) ...
+Setting up python3-software-properties (0.99.49.2) ...
+Setting up software-properties-common (0.99.49.2) ...
+Setting up software-properties-gtk (0.99.49.2) ...
+Processing triggers for libglib2.0-0t64:arm64 (2.80.0-6ubuntu3.4) ...
+Processing triggers for dbus (1.14.10-4ubuntu4.1) ...
+Processing triggers for shared-mime-info (2.4-4) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for desktop-file-utils (0.27-2build1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1.1ubuntu3) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...                                                                                 
+Scanning linux images...                                                                              
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+gpg: key 105BD0E739499BDB: 2 duplicate signatures removed
+gpg: key 105BD0E739499BDB: public key "Piotr Kuczynski <piotr.kuczynski@gmail.com>" imported
+gpg: key 3804BB82D39DC0E3: public key "Michal Papis (RVM signing) <mpapis@gmail.com>" imported
+gpg: Total number processed: 2
+gpg:               imported: 2
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ \curl -sSL https://get.rvm.io | bash -s stable
+Downloading https://github.com/rvm/rvm/archive/1.29.12.tar.gz
+Downloading https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc
+gpg: Signature made Fri Jan 15 21:46:22 2021 MSK
+gpg:                using RSA key 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+gpg: Good signature from "Piotr Kuczynski <piotr.kuczynski@gmail.com>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 7D2B AF1C F37B 13E2 069D  6956 105B D0E7 3949 9BDB
+GPG verified '/home/ubuntu/.rvm/archives/rvm-1.29.12.tgz'
+Installing RVM to /home/ubuntu/.rvm/
+    Adding rvm PATH line to /home/ubuntu/.profile /home/ubuntu/.mkshrc /home/ubuntu/.bashrc /home/ubuntu/.zshrc.
+    Adding rvm loading line to /home/ubuntu/.profile /home/ubuntu/.bash_profile /home/ubuntu/.zlogin.
+Installation of RVM in /home/ubuntu/.rvm/ is almost complete:
+
+  * To start using RVM you need to run `source /home/ubuntu/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+Thanks for installing RVM 🙏
+Please consider donating to our open collective to help us maintain RVM.
+
+👉  Donate: https://opencollective.com/rvm/donate
+
+
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ source ~/.rvm/scripts/rvm
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm install 2.7.6 
+Searching for binary rubies, this might take some time.
+No binary rubies available for: ubuntu/24.04/aarch64/ruby-2.7.6.
+Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
+Checking requirements for ubuntu.
+Installing requirements for ubuntu.
+Updating system...
+Installing required packages: libncurses5-dev, libsqlite3-dev, libtool, sqlite3.......
+Requirements installation successful.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-2.7.6, this may take a while depending on your cpu(s)...
+ruby-2.7.6 - #downloading ruby-2.7.6, this may take a while depending on your connection...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 14.1M  100 14.1M    0     0  13.7M      0  0:00:01  0:00:01 --:--:-- 13.7M
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.7.6 - #extracting ruby-2.7.6 to /home/ubuntu/.rvm/src/ruby-2.7.6.....
+ruby-2.7.6 - #configuring........................................................................
+ruby-2.7.6 - #post-configuration..
+ruby-2.7.6 - #compiling..............................................................................|
+ruby-2.7.6 - #installing.............
+Error running '__rvm_make install',
+please read /home/ubuntu/.rvm/log/1749261118_ruby-2.7.6/install.log
+There has been an error while running make install. Halting the installation.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ cat /home/ubuntu/.rvm/log/1749261118_ruby-2.7.6/install.log
+[2025-06-07 04:53:46] __rvm_make
+__rvm_make () 
+{ 
+    \make "$@" || return $?
+}
+current path: /home/ubuntu/.rvm/src/ruby-2.7.6
+PATH=/home/ubuntu/.local/share/gem/ruby/3.0.0/bin:/home/ubuntu/.rbenv/shims:/home/ubuntu/.rbenv/bin:/home/ubuntu/.rbenv/shims:/home/ubuntu/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/snap/bin:/home/ubuntu/go/bin:/home/ubuntu/KhotAbuch/workspace/node/bin:/home/ubuntu/.rvm/bin
+command(2): __rvm_make install
+++ make install
+./revision.h unchanged
+generating aarch64-linux-fake.rb
+aarch64-linux-fake.rb updated
+	BASERUBY = /home/ubuntu/.rbenv/shims/ruby --disable=gems
+	CC = gcc
+	LD = ld
+	LDSHARED = gcc -shared
+	CFLAGS = -g -O2 -fPIC 
+	XCFLAGS = -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fno-strict-overflow -fvisibility=hidden -fexcess-precision=standard -DRUBY_EXPORT -DCANONICALIZATION_FOR_MATHN -I. -I.ext/include/aarch64-linux -I./include -I. -I./enc/unicode/12.1.0
+	CPPFLAGS =   
+	DLDFLAGS = -Wl,--compress-debug-sections=zlib -Wl,-soname,libruby.so.2.7  -fstack-protector-strong  
+	SOLIBS = -lz -lpthread -lrt -lrt -lgmp -ldl -lcrypt -lm 
+	LANG = en_US.UTF-8
+	LC_ALL = 
+	LC_CTYPE = 
+	MFLAGS = 
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+generating enc.mk
+making srcs under enc
+make[1]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+make[1]: Nothing to be done for 'srcs'.
+make[1]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+generating transdb.h
+transdb.h unchanged
+generating makefiles ext/configure-ext.mk
+ext/configure-ext.mk updated
+make[1]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+make[1]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+generating makefile exts.mk
+exts.mk updated
+make[1]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/syslog'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/syslog'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/ripper'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/ripper'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/date'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/date'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/digest'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/digest'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/digest/sha2'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/digest/sha2'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/bigdecimal'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/bigdecimal'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/psych'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/psych'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/monitor'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/monitor'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/socket'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/socket'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/json'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/json'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/pty'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/pty'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/fiddle'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/fiddle'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/rubyvm'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/rubyvm'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/nkf'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/nkf'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/pathname'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/pathname'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/io/console'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/io/console'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/coverage'
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6/ext/coverage'
+make[2]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+./revision.h unchanged
+make[2]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+make[1]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+make[1]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+*** Following extensions are not compiled:
+dbm:
+	Could not be configured. It will not be installed.
+	Check ext/dbm/mkmf.log for more details.
+openssl:
+	Could not be configured. It will not be installed.
+	Check ext/openssl/mkmf.log for more details.
+*** Fix the problems, then remove these directories and try again if you want.
+make[1]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+making enc
+make[1]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+make[1]: Nothing to be done for 'enc'.
+make[1]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+making trans
+make[1]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+make[1]: Nothing to be done for './enc/trans'.
+make[1]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+making encs
+make[1]: Entering directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+make[1]: Nothing to be done for 'encs'.
+make[1]: Leaving directory '/home/ubuntu/.rvm/src/ruby-2.7.6'
+./miniruby -I./lib -I. -I.ext/common  ./tool/runruby.rb --extout=.ext  -- --disable-gems -r./aarch64-linux-fake ./tool/rbinstall.rb --make="make" --dest-dir="" --extout=".ext" --mflags="" --make-flags="" --data-mode=0644 --prog-mode=0755 --installed-list .installed.list --mantype="doc" --exclude=doc
+installing binary commands:         /home/ubuntu/.rvm/rubies/ruby-2.7.6/bin
+installing base libraries:          /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib
+installing arch files:              /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0/aarch64-linux
+installing pkgconfig data:          /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib/pkgconfig
+installing extension objects:       /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0/aarch64-linux
+installing extension objects:       /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib/ruby/site_ruby/2.7.0/aarch64-linux
+installing extension objects:       /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib/ruby/vendor_ruby/2.7.0/aarch64-linux
+installing extension headers:       /home/ubuntu/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/aarch64-linux
+installing extension scripts:       /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0
+installing extension scripts:       /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib/ruby/site_ruby/2.7.0
+installing extension scripts:       /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib/ruby/vendor_ruby/2.7.0
+installing extension headers:       /home/ubuntu/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0/ruby
+installing command scripts:         /home/ubuntu/.rvm/rubies/ruby-2.7.6/bin
+installing library scripts:         /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0
+installing common headers:          /home/ubuntu/.rvm/rubies/ruby-2.7.6/include/ruby-2.7.0
+installing manpages:                /home/ubuntu/.rvm/rubies/ruby-2.7.6/share/man (man1, man5)
+installing default gems from lib:   /home/ubuntu/.rvm/rubies/ruby-2.7.6/lib/ruby/gems/2.7.0 (build_info, cache, doc, extensions, gems, specifications)
+                                    benchmark 0.1.0
+/home/ubuntu/.rvm/src/ruby-2.7.6/lib/rubygems/core_ext/kernel_require.rb:83:in `require': cannot load such file -- openssl (LoadError)
+	from /home/ubuntu/.rvm/src/ruby-2.7.6/lib/rubygems/core_ext/kernel_require.rb:83:in `require'
+	from /home/ubuntu/.rvm/src/ruby-2.7.6/lib/rubygems/specification.rb:2430:in `to_ruby'
+	from ./tool/rbinstall.rb:846:in `block (2 levels) in install_default_gem'
+	from ./tool/rbinstall.rb:279:in `open_for_install'
+	from ./tool/rbinstall.rb:845:in `block in install_default_gem'
+	from ./tool/rbinstall.rb:835:in `each'
+	from ./tool/rbinstall.rb:835:in `install_default_gem'
+	from ./tool/rbinstall.rb:799:in `block in <main>'
+	from ./tool/rbinstall.rb:950:in `block in <main>'
+	from ./tool/rbinstall.rb:947:in `each'
+	from ./tool/rbinstall.rb:947:in `<main>'
+make: *** [uncommon.mk:380: do-install-nodoc] Error 1
+++ return 2
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ sudo apt update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Hit:2 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:3 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease
+Hit:4 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
+Hit:5 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+117 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ sudo apt install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev libgdbm-compat-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'libncurses-dev' instead of 'libncurses5-dev'
+autoconf is already the newest version (2.71-3).
+bison is already the newest version (2:3.8.2+dfsg-1build2).
+build-essential is already the newest version (12.10ubuntu1).
+libssl-dev is already the newest version (3.0.13-0ubuntu3.5).
+libyaml-dev is already the newest version (0.2.5-1build1).
+libreadline-dev is already the newest version (8.2-4build1).
+zlib1g-dev is already the newest version (1:1.3.dfsg-3.1ubuntu2.1).
+libncurses-dev is already the newest version (6.4+20240113-1ubuntu2).
+libffi-dev is already the newest version (3.4.6-1build1).
+libgdbm-dev is already the newest version (1.23-5.1build1).
+The following packages were automatically installed and are no longer required:
+  bridge-utils ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  libgdbm-compat-dev
+0 upgraded, 1 newly installed, 0 to remove and 117 not upgraded.
+Need to get 6958 B of archives.
+After this operation, 52.2 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libgdbm-compat-dev arm64 1.23-5.1build1 [6958 B]
+Fetched 6958 B in 0s (61.8 kB/s)             
+Selecting previously unselected package libgdbm-compat-dev:arm64.
+(Reading database ... 236762 files and directories currently installed.)
+Preparing to unpack .../libgdbm-compat-dev_1.23-5.1build1_arm64.deb ...
+Unpacking libgdbm-compat-dev:arm64 (1.23-5.1build1) ...
+Setting up libgdbm-compat-dev:arm64 (1.23-5.1build1) ...
+Scanning processes...                                                                                 
+Scanning linux images...                                                                              
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm reinstall 2.7.6
+ruby-2.7.6 - #removing src/ruby-2.7.6..
+ruby-2.7.6 - #removing rubies/ruby-2.7.6..
+Searching for binary rubies, this might take some time.
+No binary rubies available for: ubuntu/24.04/aarch64/ruby-2.7.6.
+Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
+Checking requirements for ubuntu.
+Installing requirements for ubuntu.
+Updating system...
+Installing required packages: libncurses5-dev....
+Requirements installation successful.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-2.7.6, this may take a while depending on your cpu(s)...
+ruby-2.7.6 - #downloading ruby-2.7.6, this may take a while depending on your connection...
+ruby-2.7.6 - #extracting ruby-2.7.6 to /home/ubuntu/.rvm/src/ruby-2.7.6.....
+ruby-2.7.6 - #configuring........................................................................
+ruby-2.7.6 - #post-configuration..
+ruby-2.7.6 - #compiling..............................................................................|
+ruby-2.7.6 - #installing.............
+Error running '__rvm_make install',
+please read /home/ubuntu/.rvm/log/1749261288_ruby-2.7.6/install.log
+There has been an error while running make install. Halting the installation.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm reinstall 2.7.6 --with-openssl-dir=/usr/include/openssl
+ruby-2.7.6 - #removing src/ruby-2.7.6..
+ruby-2.7.6 - #removing rubies/ruby-2.7.6..
+Checking requirements for ubuntu.
+Installing requirements for ubuntu.
+Updating system...
+Installing required packages: libncurses5-dev....
+Requirements installation successful.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-2.7.6, this may take a while depending on your cpu(s)...
+ruby-2.7.6 - #downloading ruby-2.7.6, this may take a while depending on your connection...
+ruby-2.7.6 - #extracting ruby-2.7.6 to /home/ubuntu/.rvm/src/ruby-2.7.6.....
+ruby-2.7.6 - #configuring........................................................................
+ruby-2.7.6 - #post-configuration..
+ruby-2.7.6 - #compiling..............................................................................|
+ruby-2.7.6 - #installing.............
+Error running '__rvm_make install',
+please read /home/ubuntu/.rvm/log/1749261478_ruby-2.7.6/install.log
+There has been an error while running make install. Halting the installation.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm install 3.0.0
+Searching for binary rubies, this might take some time.
+No binary rubies available for: ubuntu/24.04/aarch64/ruby-3.0.0.
+Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
+Checking requirements for ubuntu.
+Installing requirements for ubuntu.
+Updating system...
+Installing required packages: libncurses5-dev....
+Requirements installation successful.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-3.0.0, this may take a while depending on your cpu(s)...
+ruby-3.0.0 - #downloading ruby-3.0.0, this may take a while depending on your connection...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 18.6M  100 18.6M    0     0  20.9M      0 --:--:-- --:--:-- --:--:-- 20.9M
+ruby-3.0.0 - #extracting ruby-3.0.0 to /home/ubuntu/.rvm/src/ruby-3.0.0.....
+ruby-3.0.0 - #configuring.........................................................................
+ruby-3.0.0 - #post-configuration..
+ruby-3.0.0 - #compiling..............................................................................|
+Error running '__rvm_make -j1',
+please read /home/ubuntu/.rvm/log/1749261624_ruby-3.0.0/make.log
+
+There has been an error while running make. Halting the installation.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ sudo apt install -y libssl1.1 libssl-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package libssl1.1
+E: Couldn't find any package by glob 'libssl1.1'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm get stable
+Downloading https://get.rvm.io
+Downloading https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer.asc
+Verifying /home/ubuntu/.rvm/archives/rvm-installer.asc
+gpg: Signature made Wed Feb 22 02:35:16 2023 MSK
+gpg:                using RSA key 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+gpg: Good signature from "Piotr Kuczynski <piotr.kuczynski@gmail.com>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 7D2B AF1C F37B 13E2 069D  6956 105B D0E7 3949 9BDB
+GPG verified '/home/ubuntu/.rvm/archives/rvm-installer'
+Downloading https://github.com/rvm/rvm/archive/1.29.12.tar.gz
+Downloading https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc
+gpg: Signature made Fri Jan 15 21:46:22 2021 MSK
+gpg:                using RSA key 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+gpg: Good signature from "Piotr Kuczynski <piotr.kuczynski@gmail.com>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 7D2B AF1C F37B 13E2 069D  6956 105B D0E7 3949 9BDB
+GPG verified '/home/ubuntu/.rvm/archives/rvm-1.29.12.tgz'
+Upgrading the RVM installation in /home/ubuntu/.rvm/
+    RVM PATH line found in /home/ubuntu/.mkshrc /home/ubuntu/.profile /home/ubuntu/.bashrc /home/ubuntu/.zshrc.
+    RVM sourcing line found in /home/ubuntu/.profile /home/ubuntu/.bash_profile /home/ubuntu/.zlogin.
+    Fixing environment for ruby-2.7.6.
+ruby-2.7.6 - #gemset created /home/ubuntu/.rvm/gems/ruby-2.7.6
+ruby-2.7.6 - #importing gemsetfile /home/ubuntu/.rvm/gemsets/default.gems evaluated to empty gem list
+ruby-2.7.6 - #generating default wrappers...............
+Error running 'run_gem_wrappers regenerate',
+please read /home/ubuntu/.rvm/log/1749261958_ruby-2.7.6/gemset.wrappers.default.log
+Upgrade of RVM in /home/ubuntu/.rvm/ is complete.
+
+Thanks for installing RVM 🙏
+Please consider donating to our open collective to help us maintain RVM.
+
+👉  Donate: https://opencollective.com/rvm/donate
+
+
+RVM reloaded!
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm cleanup all
+Cleaning up rvm archives
+Cleaning up rvm repos
+Cleaning up rvm src
+Cleaning up rvm log
+Cleaning up rvm tmp
+Cleaning up rvm gemsets
+Cleaning up rvm links
+Cleanup done.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm reload
+RVM reloaded!
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm --version
+rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ \curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles
+Turning on ignore dotfiles mode.
+Downloading https://github.com/rvm/rvm/archive/master.tar.gz
+Upgrading the RVM installation in /home/ubuntu/.rvm/
+Upgrade of RVM in /home/ubuntu/.rvm/ is complete.
+
+Thanks for installing RVM 🙏
+Please consider donating to our open collective to help us maintain RVM.
+
+👉  Donate: https://opencollective.com/rvm/donate
+
+
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ echo "source $HOME/.rvm/scripts/rvm" >> scripts/activate
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ . scripts/activate
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$  rvm autolibs disable
+RVM version 1.29.12-next (master) is installed, yet version 1.29.12 (latest) is loaded.
+
+Please open a new shell or run one of the following commands:
+
+    rvm reload
+    echo rvm_auto_reload_flag=1 >> ~/.rvmrc # OR for auto reload with msg
+    echo rvm_auto_reload_flag=2 >> ~/.rvmrc # OR for silent auto reload
+
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm install ruby-2.4.2
+RVM version 1.29.12-next (master) is installed, yet version 1.29.12 (latest) is loaded.
+
+Please open a new shell or run one of the following commands:
+
+    rvm reload
+    echo rvm_auto_reload_flag=1 >> ~/.rvmrc # OR for auto reload with msg
+    echo rvm_auto_reload_flag=2 >> ~/.rvmrc # OR for silent auto reload
+
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm use 2.4.2 --default
+RVM version 1.29.12-next (master) is installed, yet version 1.29.12 (latest) is loaded.
+
+Please open a new shell or run one of the following commands:
+
+    rvm reload
+    echo rvm_auto_reload_flag=1 >> ~/.rvmrc # OR for auto reload with msg
+    echo rvm_auto_reload_flag=2 >> ~/.rvmrc # OR for silent auto reload
+
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm get stable --auto-dotfiles
+RVM version 1.29.12-next (master) is installed, yet version 1.29.12 (latest) is loaded.
+
+Please open a new shell or run one of the following commands:
+
+    rvm reload
+    echo rvm_auto_reload_flag=1 >> ~/.rvmrc # OR for auto reload with msg
+    echo rvm_auto_reload_flag=2 >> ~/.rvmrc # OR for silent auto reload
+
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm reload
+RVM reloaded!
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm install 3.0.0
+Searching for binary rubies, this might take some time.
+No binary rubies available for: ubuntu/24.04/aarch64/ruby-3.0.0.
+Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
+Checking requirements for ubuntu.
+Requirements installation successful.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-3.0.0, this may take a while depending on your cpu(s)...
+ruby-3.0.0 - #downloading ruby-3.0.0, this may take a while depending on your connection...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 18.6M  100 18.6M    0     0  24.2M      0 --:--:-- --:--:-- --:--:-- 24.2M
+ruby-3.0.0 - #extracting ruby-3.0.0 to /home/ubuntu/.rvm/src/ruby-3.0.0.....
+ruby-3.0.0 - #configuring.........................................................................
+ruby-3.0.0 - #post-configuration..
+ruby-3.0.0 - #compiling..............................................................................-
+Error running '__rvm_make -j4',
+please read /home/ubuntu/.rvm/log/1749262120_ruby-3.0.0/make.log
+
+There has been an error while running make. Halting the installation.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm list
+   ruby-2.7.6 [ aarch64 ]
+
+# Default ruby not set. Try 'rvm alias create default <ruby>'.
+
+# => - current
+# =* - current && default
+#  * - default
+
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ ruby -v
+ruby 3.2.2 (2023-03-30 revision e51014f9c0) [aarch64-linux]
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm use 3.0.0 --default
+Required ruby-3.0.0 is not installed.
+To install do: 'rvm install "ruby-3.0.0"'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm install "ruby-3.0.0"
+ruby-3.0.0 - #removing src/ruby-3.0.0..
+Searching for binary rubies, this might take some time.
+No binary rubies available for: ubuntu/24.04/aarch64/ruby-3.0.0.
+Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
+Checking requirements for ubuntu.
+Requirements installation successful.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-3.0.0, this may take a while depending on your cpu(s)...
+ruby-3.0.0 - #downloading ruby-3.0.0, this may take a while depending on your connection...
+ruby-3.0.0 - #extracting ruby-3.0.0 to /home/ubuntu/.rvm/src/ruby-3.0.0.....
+ruby-3.0.0 - #configuring.........................................................................
+ruby-3.0.0 - #post-configuration..
+ruby-3.0.0 - #compiling...............................................................................
+Error running '__rvm_make -j4',
+please read /home/ubuntu/.rvm/log/1749262223_ruby-3.0.0/make.log
+
+There has been an error while running make. Halting the installation.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ sudo apt install -y libssl-dev libreadline-dev zlib1g-dev libyaml-dev libffi-dev libgdbm-dev libncurses5-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'libncurses-dev' instead of 'libncurses5-dev'
+libssl-dev is already the newest version (3.0.13-0ubuntu3.5).
+libreadline-dev is already the newest version (8.2-4build1).
+zlib1g-dev is already the newest version (1:1.3.dfsg-3.1ubuntu2.1).
+libyaml-dev is already the newest version (0.2.5-1build1).
+libffi-dev is already the newest version (3.4.6-1build1).
+libgdbm-dev is already the newest version (1.23-5.1build1).
+libncurses-dev is already the newest version (6.4+20240113-1ubuntu2).
+The following packages were automatically installed and are no longer required:
+  bridge-utils ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 117 not upgraded.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm install 3.0.0 -j1
+Unrecognized command line flag: '-j1'
+Run `rvm help` to see usage information
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm install 3.1.4
+Searching for binary rubies, this might take some time.
+No binary rubies available for: ubuntu/24.04/aarch64/ruby-3.1.4.
+Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
+Checking requirements for ubuntu.
+Requirements installation successful.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-3.1.4, this may take a while depending on your cpu(s)...
+ruby-3.1.4 - #downloading ruby-3.1.4, this may take a while depending on your connection...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 19.9M  100 19.9M    0     0  23.6M      0 --:--:-- --:--:-- --:--:-- 23.6M
+ruby-3.1.4 - #extracting ruby-3.1.4 to /home/ubuntu/.rvm/src/ruby-3.1.4.....
+ruby-3.1.4 - #autogen.sh.
+ruby-3.1.4 - #configuring...............................................................
+ruby-3.1.4 - #post-configuration..
+ruby-3.1.4 - #compiling..............................................................................|
+ruby-3.1.4 - #installing......................
+ruby-3.1.4 - #making binaries executable...
+Installed rubygems 3.3.26 is newer than 3.0.9 provided with installed ruby, skipping installation, use --force to force installation.
+ruby-3.1.4 - #gemset created /home/ubuntu/.rvm/gems/ruby-3.1.4@global
+ruby-3.1.4 - #importing gemset /home/ubuntu/.rvm/gemsets/global.gems.................................-
+ruby-3.1.4 - #generating global wrappers........
+ruby-3.1.4 - #gemset created /home/ubuntu/.rvm/gems/ruby-3.1.4
+ruby-3.1.4 - #importing gemsetfile /home/ubuntu/.rvm/gemsets/default.gems evaluated to empty gem list
+ruby-3.1.4 - #generating default wrappers........
+ruby-3.1.4 - #adjusting #shebangs for (gem irb erb ri rdoc testrb rake).
+Install of ruby-3.1.4 - #complete 
+Ruby was built without documentation, to build it run: rvm docs generate-ri
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ rvm use 3.1.4 --default
+Using /home/ubuntu/.rvm/gems/ruby-3.1.4
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ gem install travis
+Fetching pusher-client-0.6.2.gem
+Fetching public_suffix-6.0.2.gem
+Fetching json_pure-2.8.1.gem
+Fetching highline-2.1.0.gem
+Fetching websocket-1.2.11.gem
+Fetching net-http-pipeline-1.0.1.gem
+Fetching addressable-2.8.7.gem
+Fetching launchy-2.4.3.gem
+Fetching net-http-persistent-2.9.4.gem
+Fetching multi_json-1.15.0.gem
+Fetching faraday-retry-1.0.3.gem
+Fetching faraday-rack-1.0.0.gem
+Fetching faraday-patron-1.0.0.gem
+Fetching faraday-net_http_persistent-1.2.0.gem
+Fetching faraday-net_http-1.0.2.gem
+Fetching multipart-post-2.4.1.gem
+Fetching faraday-multipart-1.1.0.gem
+Fetching faraday-httpclient-1.0.1.gem
+Fetching faraday-excon-1.1.0.gem
+Fetching faraday-em_synchrony-1.0.0.gem
+Fetching faraday-em_http-1.0.0.gem
+Fetching faraday-1.10.4.gem
+Fetching faraday_middleware-1.2.1.gem
+Fetching thread_safe-0.3.6.gem
+Fetching tzinfo-1.2.11.gem
+Fetching concurrent-ruby-1.3.5.gem
+Fetching i18n-1.14.7.gem
+Fetching activesupport-5.2.8.1.gem
+Fetching gh-0.18.0.gem
+Fetching travis-1.11.1.gem
+Successfully installed websocket-1.2.11
+Successfully installed pusher-client-0.6.2
+Successfully installed public_suffix-6.0.2
+Successfully installed addressable-2.8.7
+Successfully installed launchy-2.4.3
+Successfully installed json_pure-2.8.1
+Successfully installed highline-2.1.0
+Successfully installed net-http-pipeline-1.0.1
+Successfully installed net-http-persistent-2.9.4
+Successfully installed multi_json-1.15.0
+Successfully installed faraday-retry-1.0.3
+Successfully installed faraday-rack-1.0.0
+Successfully installed faraday-patron-1.0.0
+Successfully installed faraday-net_http_persistent-1.2.0
+Successfully installed faraday-net_http-1.0.2
+Successfully installed multipart-post-2.4.1
+Successfully installed faraday-multipart-1.1.0
+Successfully installed faraday-httpclient-1.0.1
+Successfully installed faraday-excon-1.1.0
+Successfully installed faraday-em_synchrony-1.0.0
+Successfully installed faraday-em_http-1.0.0
+Successfully installed faraday-1.10.4
+Successfully installed faraday_middleware-1.2.1
+Successfully installed thread_safe-0.3.6
+Successfully installed tzinfo-1.2.11
+Successfully installed concurrent-ruby-1.3.5
+Successfully installed i18n-1.14.7
+Successfully installed activesupport-5.2.8.1
+Successfully installed gh-0.18.0
+Successfully installed travis-1.11.1
+Parsing documentation for websocket-1.2.11
+Installing ri documentation for websocket-1.2.11
+Parsing documentation for pusher-client-0.6.2
+Installing ri documentation for pusher-client-0.6.2
+Parsing documentation for public_suffix-6.0.2
+Installing ri documentation for public_suffix-6.0.2
+Parsing documentation for addressable-2.8.7
+Installing ri documentation for addressable-2.8.7
+Parsing documentation for launchy-2.4.3
+Installing ri documentation for launchy-2.4.3
+Parsing documentation for json_pure-2.8.1
+Installing ri documentation for json_pure-2.8.1
+Parsing documentation for highline-2.1.0
+Installing ri documentation for highline-2.1.0
+Parsing documentation for net-http-pipeline-1.0.1
+Installing ri documentation for net-http-pipeline-1.0.1
+Parsing documentation for net-http-persistent-2.9.4
+Installing ri documentation for net-http-persistent-2.9.4
+Parsing documentation for multi_json-1.15.0
+Installing ri documentation for multi_json-1.15.0
+Parsing documentation for faraday-retry-1.0.3
+Installing ri documentation for faraday-retry-1.0.3
+Parsing documentation for faraday-rack-1.0.0
+Installing ri documentation for faraday-rack-1.0.0
+Parsing documentation for faraday-patron-1.0.0
+Installing ri documentation for faraday-patron-1.0.0
+Parsing documentation for faraday-net_http_persistent-1.2.0
+Installing ri documentation for faraday-net_http_persistent-1.2.0
+Parsing documentation for faraday-net_http-1.0.2
+Installing ri documentation for faraday-net_http-1.0.2
+Parsing documentation for multipart-post-2.4.1
+Installing ri documentation for multipart-post-2.4.1
+Parsing documentation for faraday-multipart-1.1.0
+Installing ri documentation for faraday-multipart-1.1.0
+Parsing documentation for faraday-httpclient-1.0.1
+Installing ri documentation for faraday-httpclient-1.0.1
+Parsing documentation for faraday-excon-1.1.0
+Installing ri documentation for faraday-excon-1.1.0
+Parsing documentation for faraday-em_synchrony-1.0.0
+Installing ri documentation for faraday-em_synchrony-1.0.0
+Parsing documentation for faraday-em_http-1.0.0
+Installing ri documentation for faraday-em_http-1.0.0
+Parsing documentation for faraday-1.10.4
+Installing ri documentation for faraday-1.10.4
+Parsing documentation for faraday_middleware-1.2.1
+Installing ri documentation for faraday_middleware-1.2.1
+Parsing documentation for thread_safe-0.3.6
+Installing ri documentation for thread_safe-0.3.6
+Parsing documentation for tzinfo-1.2.11
+Installing ri documentation for tzinfo-1.2.11
+Parsing documentation for concurrent-ruby-1.3.5
+Installing ri documentation for concurrent-ruby-1.3.5
+Parsing documentation for i18n-1.14.7
+Installing ri documentation for i18n-1.14.7
+Parsing documentation for activesupport-5.2.8.1
+Installing ri documentation for activesupport-5.2.8.1
+Parsing documentation for gh-0.18.0
+Installing ri documentation for gh-0.18.0
+Parsing documentation for travis-1.11.1
+Installing ri documentation for travis-1.11.1
+Done installing documentation for websocket, pusher-client, public_suffix, addressable, launchy, json_pure, highline, net-http-pipeline, net-http-persistent, multi_json, faraday-retry, faraday-rack, faraday-patron, faraday-net_http_persistent, faraday-net_http, multipart-post, faraday-multipart, faraday-httpclient, faraday-excon, faraday-em_synchrony, faraday-em_http, faraday, faraday_middleware, thread_safe, tzinfo, concurrent-ruby, i18n, activesupport, gh, travis after 5 seconds
+30 gems installed
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ git clone https://github.com/${GITHUB_USERNAME}/lab03 projects/lab04
+Cloning into 'projects/lab04'...
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (16/16), done.
+Receiving objects: 100% (18/18), 10.14 KiB | 10.14 MiB/s, done.
+Resolving deltas: 100% (2/2), done.
+remote: Total 18 (delta 2), reused 11 (delta 0), pack-reused 0 (from 0)
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ cd projects/lab04
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ git remote remove origin
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab04
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ cat > .travis.yml <<EOF
+language: cpp
+script:
+- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
+- cmake --build _build
+- cmake --build _build --target install
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake
+      - cmake-data
+> EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ nano .travis.yml
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis login --github-token ${GITHUB_TOKEN}
+Outdated CLI version, run `gem install travis`.
+resource not found ({}
+)
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis login --github-token *****
+Outdated CLI version, run `gem install travis`.
+resource not found ({}
+)
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ gem install travis
+Successfully installed travis-1.11.1
+Parsing documentation for travis-1.11.1
+Done installing documentation for travis after 0 seconds
+1 gem installed
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis login --github-token *****
+Outdated CLI version, run `gem install travis`.
+resource not found ({}
+)
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis login --pro --github-token *****
+Outdated CLI version, run `gem install travis`.
+Successfully logged in as KhotAbuch!
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ nano .travis.yml
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ nano .travis.yml
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ cat > .travis.yml <<'EOF'
+language: cpp
+script:
+  - cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
+  - cmake --build _build
+  - cmake --build _build --target install
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake
+      - cmake-data
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ gem install travis --user-install
+WARNING:  You don't have /home/ubuntu/.gem/ruby/3.1.0/bin in your PATH,
+	  gem executables will not run.
+Successfully installed travis-1.11.1
+Parsing documentation for travis-1.11.1
+Installing ri documentation for travis-1.11.1
+Done installing documentation for travis after 0 seconds
+1 gem installed
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis enable --pro -r KhotAbuch/lab04
+Outdated CLI version, run `gem install travis`.
+KhotAbuch/lab04: enabled :)
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis lint
+Outdated CLI version, run `gem install travis`.
+405: "<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n"
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ gem uninstall travis
+Remove executables:
+	travis
+
+in addition to the gem? [Yn]  н
+Remove executables:
+	travis
+
+in addition to the gem? [Yn]  y
+Removing travis
+Successfully uninstalled travis-1.11.1
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ gem install travis --user-install
+Fetching travis-1.11.1.gem
+WARNING:  You don't have /home/ubuntu/.gem/ruby/3.1.0/bin in your PATH,
+	  gem executables will not run.
+Successfully installed travis-1.11.1
+Parsing documentation for travis-1.11.1
+Done installing documentation for travis after 0 seconds
+1 gem installed
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ export PATH="$HOME/.local/share/gem/ruby/3.1.4/bin:$PATH"
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis login --github-toke *****
+/home/ubuntu/.rbenv/versions/3.2.2/lib/ruby/3.2.0/rubygems.rb:263:in `find_spec_for_exe': can't find gem travis (>= 0.a) with executable travis (Gem::GemNotFoundException)
+	from /home/ubuntu/.rbenv/versions/3.2.2/lib/ruby/3.2.0/rubygems.rb:282:in `activate_bin_path'
+	from /home/ubuntu/.rbenv/versions/3.2.2/bin/travis:25:in `<main>'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis login --pro --github-token *****
+/home/ubuntu/.rbenv/versions/3.2.2/lib/ruby/3.2.0/rubygems.rb:263:in `find_spec_for_exe': can't find gem travis (>= 0.a) with executable travis (Gem::GemNotFoundException)
+	from /home/ubuntu/.rbenv/versions/3.2.2/lib/ruby/3.2.0/rubygems.rb:282:in `activate_bin_path'
+	from /home/ubuntu/.rbenv/versions/3.2.2/bin/travis:25:in `<main>'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis login --github-token *****
+/home/ubuntu/.rbenv/versions/3.2.2/lib/ruby/3.2.0/rubygems.rb:263:in `find_spec_for_exe': can't find gem travis (>= 0.a) with executable travis (Gem::GemNotFoundException)
+	from /home/ubuntu/.rbenv/versions/3.2.2/lib/ruby/3.2.0/rubygems.rb:282:in `activate_bin_path'
+	from /home/ubuntu/.rbenv/versions/3.2.2/bin/travis:25:in `<main>'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ 
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ gem uninstall travis -a -x
+Gem 'travis' is not installed
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ gem cleanup
+Cleaning up installed gems...
+Clean up complete
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ gem install travis --user-install --no-document
+WARNING:  You don't have /home/ubuntu/.gem/ruby/3.1.0/bin in your PATH,
+	  gem executables will not run.
+Successfully installed travis-1.11.1
+1 gem installed
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ echo 'export PATH="$HOME/.local/share/gem/ruby/3.1.4/bin:$PATH"' >> ~/.bashrc
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ source ~/.bashrc
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ which travis
+/home/ubuntu/.rbenv/shims/travis
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis version
+/home/ubuntu/.rbenv/versions/3.2.2/lib/ruby/3.2.0/rubygems.rb:263:in `find_spec_for_exe': can't find gem travis (>= 0.a) with executable travis (Gem::GemNotFoundException)
+	from /home/ubuntu/.rbenv/versions/3.2.2/lib/ruby/3.2.0/rubygems.rb:282:in `activate_bin_path'
+	from /home/ubuntu/.rbenv/versions/3.2.2/bin/travis:25:in `<main>'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ rbenv global 3.1.4
+rbenv: version `3.1.4' not installed
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ ruby -v
+ruby 3.2.2 (2023-03-30 revision e51014f9c0) [aarch64-linux]
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ sed -i '/.local\/share\/gem\/ruby\/3.1.4\/bin/d' ~/.bashrc
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ echo 'export PATH="$HOME/.gem/ruby/3.2.2/bin:$PATH"' >> ~/.bashrc
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ source ~/.bashrc
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ rbenv global 3.2.2
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ gem install travis --no-document
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+Error loading RubyGems plugin "/home/ubuntu/.rvm/rubies/ruby-3.1.4/lib/ruby/gems/3.1.0/plugins/executable-hooks_plugin.rb": cannot load such file -- executable-hooks/wrapper (LoadError)
+Error loading RubyGems plugin "/home/ubuntu/.rvm/rubies/ruby-3.1.4/lib/ruby/gems/3.1.0/plugins/gem-wrappers_plugin.rb": cannot load such file -- gem-wrappers (LoadError)
+Fetching ethon-0.16.0.gem
+Fetching typhoeus-1.4.1.gem
+Fetching faraday-net_http-3.0.2.gem
+Fetching faraday-2.7.12.gem
+Fetching ffi-1.17.2-aarch64-linux-gnu.gem
+Fetching faraday-typhoeus-1.1.0.gem
+Fetching connection_pool-2.5.3.gem
+Fetching net-http-persistent-4.0.6.gem
+Fetching tzinfo-2.0.6.gem
+Fetching activesupport-7.0.8.7.gem
+Fetching travis-gh-0.21.0.gem
+Fetching rack-test-2.1.0.gem
+Fetching launchy-2.5.2.gem
+Fetching json_pure-2.6.3.gem
+Fetching faraday-rack-2.1.2.gem
+Fetching travis-1.14.0.gem
+Fetching rack-3.1.16.gem
+Successfully installed connection_pool-2.5.3
+Successfully installed net-http-persistent-4.0.6
+Successfully installed ffi-1.17.2-aarch64-linux-gnu
+Successfully installed ethon-0.16.0
+Successfully installed typhoeus-1.4.1
+Successfully installed faraday-net_http-3.0.2
+Successfully installed faraday-2.7.12
+Successfully installed faraday-typhoeus-1.1.0
+Successfully installed tzinfo-2.0.6
+Successfully installed activesupport-7.0.8.7
+Successfully installed travis-gh-0.21.0
+Successfully installed rack-3.1.16
+Successfully installed rack-test-2.1.0
+Successfully installed launchy-2.5.2
+Successfully installed json_pure-2.6.3
+Successfully installed faraday-rack-2.1.2
+Successfully installed travis-1.14.0
+17 gems installed
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ which travis
+/home/ubuntu/.rbenv/shims/travis
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis version
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+1.14.0
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis login --pro --github-token *****
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+Successfully logged in as KhotAbuch!
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis lint
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+Hooray, .travis.yml looks valid :)
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ ex -sc '1i|<фрагмент_вставки_значка>' -cx README.md
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ ex -sc '1i|[![Build Status](https://app.travis-ci.com/KhotAbuch/lab04.svg?token=XEpXNMPYzMj8jR8qBnpV)](https://app.travis-ci.com/KhotAbuch/lab04)' -cx README.md
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ git add .travis.yml
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ git add README.md
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ git commit -m"added CI"
+[main 78b0463] added CI
+ 2 files changed, 14 insertions(+)
+ create mode 100644 .travis.yml
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/KhotAbuch/lab04'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ git push origin main
+Username for 'https://github.com': KhotAbuch
+Password for 'https://KhotAbuch@github.com': 
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (22/22), 10.74 KiB | 10.74 MiB/s, done.
+Total 22 (delta 3), reused 17 (delta 2), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/KhotAbuch/lab04
+ * [new branch]      main -> main
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis lint
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+Hooray, .travis.yml looks valid :)
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis accounts
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+KhotAbuch (Khotabuch): not subscribed, 4 repositories
+To set up a subscription, please visit app.travis-ci.com.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis sync
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+synchronizing: . done
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis repos
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+KhotAbuch/lab01 /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/lib/travis/cli/command.rb:334:in `format': wrong number of arguments (given 5, expected 1..3) (ArgumentError)
+	from /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/lib/travis/cli/command.rb:315:in `store_error'
+	from /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/lib/travis/cli/command.rb:235:in `rescue in execute'
+	from /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/lib/travis/cli/command.rb:200:in `execute'
+	from /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/lib/travis/cli.rb:66:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/bin/travis:21:in `<top (required)>'
+	from /home/ubuntu/.rbenv/versions/3.2.2/bin/travis:25:in `load'
+	from /home/ubuntu/.rbenv/versions/3.2.2/bin/travis:25:in `<main>'
+/home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/lib/travis/cli/repos.rb:23:in `block in run': can't modify frozen String: "(" (FrozenError)
+	from /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/lib/travis/cli/repos.rb:18:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/lib/travis/cli/repos.rb:18:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/lib/travis/cli/command.rb:208:in `execute'
+	from /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/lib/travis/cli.rb:66:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-3.1.4/gems/travis-1.14.0/bin/travis:21:in `<top (required)>'
+	from /home/ubuntu/.rbenv/versions/3.2.2/bin/travis:25:in `load'
+	from /home/ubuntu/.rbenv/versions/3.2.2/bin/travis:25:in `<main>'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis enable
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+Detected repository as KhotAbuch/lab04, is this correct? |yes| y
+KhotAbuch/lab04: enabled :)
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis whatsup
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+nothing to show
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis branches
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis history
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ travis show
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+no build yet for KhotAbuch/lab04
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/projects/lab04$ 
