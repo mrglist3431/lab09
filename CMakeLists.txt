@@ -43,6 +43,15 @@ install(TARGETS print
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include)
 install(EXPORT print-config DESTINATION cmake)
 
+include(InstallRequiredSystemLibraries)
+set(CPACK_PACKAGE_NAME "print")
+set(CPACK_PACKAGE_VERSION "${PRINT_VERSION}")
+set(CPACK_PACKAGE_CONTACT "Your Name <your.email@example.com>")
+set(CPACK_PACKAGE_DESCRIPTION "A simple printing library")
+set(CPACK_PACKAGE_VENDOR "Your Organization")
+set(CPACK_GENERATOR "TGZ")
+include(CPack)
+
 if(BUILD_TESTS)
   enable_testing()
   add_subdirectory(third-party/gtest)
