@@ -1,0 +1,1 @@
+/usr/bin/clang++ -std=c++14 CMakeFiles/check.dir/tests/test1.cpp.o -o check  libprint.a lib/libgtest_main.a lib/libgtest.a 

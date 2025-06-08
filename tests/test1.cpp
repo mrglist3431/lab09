@@ -1,19 +1,16 @@
-#include <print.hpp>
-
+#include "print.hpp"
 #include <gtest/gtest.h>
+#include <sstream>
 
-TEST(Print, InFileStream)
-{
-  std::string filepath = "file.txt";
-  std::string text = "hello";
-  std::ofstream out{filepath};
+TEST(PrintTest, BasicTest) {
+    std::ostringstream oss;
+    print("test", oss);
+    EXPECT_EQ(oss.str(), "test\n");
+}
 
-  print(text, out);
-  out.close();
-
-  std::string result;
-  std::ifstream in{filepath};
-  in >> result;
-
-  EXPECT_EQ(result, text);
+TEST(PrintTest, DefaultStreamTest) {
+    testing::internal::CaptureStdout();
+    print("default");
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "default\n");
 }

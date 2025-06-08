@@ -1,0 +1,5 @@
+if(EXISTS "/home/ubuntu/KhotAbuch/workspace/projects/lab07/_builds/default/check[1]_tests.cmake")
+  include("/home/ubuntu/KhotAbuch/workspace/projects/lab07/_builds/default/check[1]_tests.cmake")
+else()
+  add_test(check_NOT_BUILT check_NOT_BUILT)
+endif()

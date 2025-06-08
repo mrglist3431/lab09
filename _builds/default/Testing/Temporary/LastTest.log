@@ -1,0 +1,57 @@
+Start testing: Jun 08 03:53 MSK
+----------------------------------------------------------
+1/2 Testing: PrintTest.BasicTest
+1/2 Test: PrintTest.BasicTest
+Command: "/home/ubuntu/KhotAbuch/workspace/projects/lab07/_builds/default/check" "--gtest_filter=PrintTest.BasicTest" "--gtest_also_run_disabled_tests"
+Directory: /home/ubuntu/KhotAbuch/workspace/projects/lab07/_builds/default
+"PrintTest.BasicTest" start time: Jun 08 03:53 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/ubuntu/KhotAbuch/workspace/projects/lab07/_builds/default/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = PrintTest.BasicTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PrintTest
+[ RUN      ] PrintTest.BasicTest
+[       OK ] PrintTest.BasicTest (0 ms)
+[----------] 1 test from PrintTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PrintTest.BasicTest" end time: Jun 08 03:53 MSK
+"PrintTest.BasicTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: PrintTest.DefaultStreamTest
+2/2 Test: PrintTest.DefaultStreamTest
+Command: "/home/ubuntu/KhotAbuch/workspace/projects/lab07/_builds/default/check" "--gtest_filter=PrintTest.DefaultStreamTest" "--gtest_also_run_disabled_tests"
+Directory: /home/ubuntu/KhotAbuch/workspace/projects/lab07/_builds/default
+"PrintTest.DefaultStreamTest" start time: Jun 08 03:53 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/ubuntu/KhotAbuch/workspace/projects/lab07/_builds/default/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = PrintTest.DefaultStreamTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PrintTest
+[ RUN      ] PrintTest.DefaultStreamTest
+[       OK ] PrintTest.DefaultStreamTest (0 ms)
+[----------] 1 test from PrintTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PrintTest.DefaultStreamTest" end time: Jun 08 03:53 MSK
+"PrintTest.DefaultStreamTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 08 03:53 MSK
