@@ -1,0 +1,2374 @@
+ubuntu@Ubuntu-GUI:~$ export GITHUB_USERNAME=KhotAbuch
+ubuntu@Ubuntu-GUI:~$ cd ${GITHUB_USERNAME}/workspace
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ pushd .
+~/KhotAbuch/workspace ~/KhotAbuch/workspace
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ source scripts/activate
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ git clone https://github.com/${GITHUB_USERNAME}/lab07 lab08
+Cloning into 'lab08'...
+remote: Enumerating objects: 570, done.
+remote: Counting objects: 100% (570/570), done.
+remote: Compressing objects: 100% (245/245), done.
+remote: Total 570 (delta 282), reused 565 (delta 280), pack-reused 0 (from 0)
+Receiving objects: 100% (570/570), 3.23 MiB | 7.36 MiB/s, done.
+Resolving deltas: 100% (282/282), done.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace$ cd lab08
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git submodule update --init
+fatal: No url found for submodule path '_builds/clang-cxx14/_deps/googletest-src' in .gitmodules
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf _builds/clang-cxx14/_deps/googletest-src
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git submodule add https://github.com/google/googletest.git third_party/googletest
+Cloning into '/home/ubuntu/KhotAbuch/workspace/lab08/third_party/googletest'...
+remote: Enumerating objects: 28129, done.
+remote: Counting objects: 100% (374/374), done.
+remote: Compressing objects: 100% (232/232), done.
+remote: Total 28129 (delta 256), reused 143 (delta 142), pack-reused 27755 (from 2)
+Receiving objects: 100% (28129/28129), 13.45 MiB | 16.49 MiB/s, done.
+Resolving deltas: 100% (20843/20843), done.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git submodule update --init --recursive
+fatal: No url found for submodule path '_builds/clang-cxx14/_deps/googletest-src' in .gitmodules
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf _builds/clang-cxx14/_deps/googletest-src
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git rm --cached -r _builds/clang-cxx14/_deps/googletest-src
+rm '_builds/clang-cxx14/_deps/googletest-src'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git config -f .gitmodules --remove-section submodule._builds/clang-cxx14/_deps/googletest-src 2>/dev/null
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git config -f .git/config --remove-section submodule._builds/clang-cxx14/_deps/googletest-src 2>/dev/null
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf .git/modules/_builds/clang-cxx14/_deps/googletest-src
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git submodule add https://github.com/google/googletest.git third_party/googletest
+fatal: 'third_party/googletest' already exists in the index
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git submodule update --init --recursive
+fatal: No url found for submodule path '_builds/default/_deps/googletest-src' in .gitmodules
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf _builds/
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git rm --cached -r _builds/
+rm '_builds/clang-cxx14/CMakeCache.txt'
+rm '_builds/clang-cxx14/CMakeFiles/3.28.3/CMakeCCompiler.cmake'
+rm '_builds/clang-cxx14/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake'
+rm '_builds/clang-cxx14/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_C.bin'
+rm '_builds/clang-cxx14/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_CXX.bin'
+rm '_builds/clang-cxx14/CMakeFiles/3.28.3/CMakeSystem.cmake'
+rm '_builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c'
+rm '_builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdC/a.out'
+rm '_builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp'
+rm '_builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdCXX/a.out'
+rm '_builds/clang-cxx14/CMakeFiles/CMakeConfigureLog.yaml'
+rm '_builds/clang-cxx14/CMakeFiles/CMakeDirectoryInformation.cmake'
+rm '_builds/clang-cxx14/CMakeFiles/Makefile.cmake'
+rm '_builds/clang-cxx14/CMakeFiles/Makefile2'
+rm '_builds/clang-cxx14/CMakeFiles/TargetDirectories.txt'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/DependInfo.cmake'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/build.make'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/cmake_clean.cmake'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/compiler_depend.make'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/compiler_depend.ts'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/depend.make'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/flags.make'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/link.txt'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/progress.make'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/tests/test1.cpp.o'
+rm '_builds/clang-cxx14/CMakeFiles/check.dir/tests/test1.cpp.o.d'
+rm '_builds/clang-cxx14/CMakeFiles/cmake.check_cache'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/DependInfo.cmake'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/build.make'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/cmake_clean.cmake'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/cmake_clean_target.cmake'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/compiler_depend.make'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/compiler_depend.ts'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/depend.make'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/flags.make'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/link.txt'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/print.cpp.o'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/print.cpp.o.d'
+rm '_builds/clang-cxx14/CMakeFiles/print.dir/progress.make'
+rm '_builds/clang-cxx14/CMakeFiles/progress.marks'
+rm '_builds/clang-cxx14/CTestTestfile.cmake'
+rm '_builds/clang-cxx14/Makefile'
+rm '_builds/clang-cxx14/_3rdParty/polly/saved-arguments'
+rm '_builds/clang-cxx14/_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/CMakeFiles/progress.marks'
+rm '_builds/clang-cxx14/_deps/googletest-build/CTestTestfile.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/Makefile'
+rm '_builds/clang-cxx14/_deps/googletest-build/cmake_install.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/link.txt'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/link.txt'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/progress.marks'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/CTestTestfile.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/Makefile'
+rm '_builds/clang-cxx14/_deps/googletest-build/googlemock/cmake_install.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-noconfig.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.ts'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/link.txt'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/progress.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/link.txt'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/progress.make'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/progress.marks'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/CTestTestfile.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/Makefile'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/cmake_install.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/generated/GTestConfig.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/generated/GTestConfigVersion.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/generated/gmock.pc'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/generated/gmock_main.pc'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/generated/gtest.pc'
+rm '_builds/clang-cxx14/_deps/googletest-build/googletest/generated/gtest_main.pc'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeCache.txt'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/3.28.3/CMakeSystem.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/CMakeConfigureLog.yaml'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/CMakeRuleHashes.txt'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/Makefile.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/Makefile2'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/TargetDirectories.txt'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/cmake.check_cache'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/DependInfo.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.json'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.txt'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/build.make'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/cmake_clean.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.make'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.ts'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/progress.make'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/progress.marks'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/CMakeLists.txt'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/Makefile'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/cmake_install.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch-info.txt'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update-info.txt'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitclone.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake'
+rm '_builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake'
+rm '_builds/clang-cxx14/check'
+rm '_builds/clang-cxx14/check[1]_include.cmake'
+rm '_builds/clang-cxx14/check[1]_tests.cmake'
+rm '_builds/clang-cxx14/cmake_install.cmake'
+rm '_builds/clang-cxx14/lib/libgmock.a'
+rm '_builds/clang-cxx14/lib/libgmock_main.a'
+rm '_builds/clang-cxx14/lib/libgtest.a'
+rm '_builds/clang-cxx14/lib/libgtest_main.a'
+rm '_builds/clang-cxx14/libprint.a'
+rm '_builds/default/CMakeCache.txt'
+rm '_builds/default/CMakeFiles/3.28.3/CMakeCCompiler.cmake'
+rm '_builds/default/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake'
+rm '_builds/default/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_C.bin'
+rm '_builds/default/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_CXX.bin'
+rm '_builds/default/CMakeFiles/3.28.3/CMakeSystem.cmake'
+rm '_builds/default/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c'
+rm '_builds/default/CMakeFiles/3.28.3/CompilerIdC/a.out'
+rm '_builds/default/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp'
+rm '_builds/default/CMakeFiles/3.28.3/CompilerIdCXX/a.out'
+rm '_builds/default/CMakeFiles/CMakeConfigureLog.yaml'
+rm '_builds/default/CMakeFiles/CMakeDirectoryInformation.cmake'
+rm '_builds/default/CMakeFiles/Makefile.cmake'
+rm '_builds/default/CMakeFiles/Makefile2'
+rm '_builds/default/CMakeFiles/TargetDirectories.txt'
+rm '_builds/default/CMakeFiles/check.dir/DependInfo.cmake'
+rm '_builds/default/CMakeFiles/check.dir/build.make'
+rm '_builds/default/CMakeFiles/check.dir/cmake_clean.cmake'
+rm '_builds/default/CMakeFiles/check.dir/compiler_depend.make'
+rm '_builds/default/CMakeFiles/check.dir/compiler_depend.ts'
+rm '_builds/default/CMakeFiles/check.dir/depend.make'
+rm '_builds/default/CMakeFiles/check.dir/flags.make'
+rm '_builds/default/CMakeFiles/check.dir/link.txt'
+rm '_builds/default/CMakeFiles/check.dir/progress.make'
+rm '_builds/default/CMakeFiles/check.dir/tests/test1.cpp.o'
+rm '_builds/default/CMakeFiles/check.dir/tests/test1.cpp.o.d'
+rm '_builds/default/CMakeFiles/cmake.check_cache'
+rm '_builds/default/CMakeFiles/print.dir/DependInfo.cmake'
+rm '_builds/default/CMakeFiles/print.dir/build.make'
+rm '_builds/default/CMakeFiles/print.dir/cmake_clean.cmake'
+rm '_builds/default/CMakeFiles/print.dir/cmake_clean_target.cmake'
+rm '_builds/default/CMakeFiles/print.dir/compiler_depend.make'
+rm '_builds/default/CMakeFiles/print.dir/compiler_depend.ts'
+rm '_builds/default/CMakeFiles/print.dir/depend.make'
+rm '_builds/default/CMakeFiles/print.dir/flags.make'
+rm '_builds/default/CMakeFiles/print.dir/link.txt'
+rm '_builds/default/CMakeFiles/print.dir/print.cpp.o'
+rm '_builds/default/CMakeFiles/print.dir/print.cpp.o.d'
+rm '_builds/default/CMakeFiles/print.dir/progress.make'
+rm '_builds/default/CMakeFiles/progress.marks'
+rm '_builds/default/CTestTestfile.cmake'
+rm '_builds/default/Makefile'
+rm '_builds/default/Testing/Temporary/CTestCostData.txt'
+rm '_builds/default/Testing/Temporary/LastTest.log'
+rm '_builds/default/_3rdParty/polly/saved-arguments'
+rm '_builds/default/_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake'
+rm '_builds/default/_deps/googletest-build/CMakeFiles/progress.marks'
+rm '_builds/default/_deps/googletest-build/CTestTestfile.cmake'
+rm '_builds/default/_deps/googletest-build/Makefile'
+rm '_builds/default/_deps/googletest-build/cmake_install.cmake'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend.make'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/link.txt'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend.make'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/link.txt'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d'
+rm '_builds/default/_deps/googletest-build/googlemock/CMakeFiles/progress.marks'
+rm '_builds/default/_deps/googletest-build/googlemock/CTestTestfile.cmake'
+rm '_builds/default/_deps/googletest-build/googlemock/Makefile'
+rm '_builds/default/_deps/googletest-build/googlemock/cmake_install.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-noconfig.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.ts'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend.make'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/link.txt'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/progress.make'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend.make'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/link.txt'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/progress.make'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d'
+rm '_builds/default/_deps/googletest-build/googletest/CMakeFiles/progress.marks'
+rm '_builds/default/_deps/googletest-build/googletest/CTestTestfile.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/Makefile'
+rm '_builds/default/_deps/googletest-build/googletest/cmake_install.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/generated/GTestConfig.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/generated/GTestConfigVersion.cmake'
+rm '_builds/default/_deps/googletest-build/googletest/generated/gmock.pc'
+rm '_builds/default/_deps/googletest-build/googletest/generated/gmock_main.pc'
+rm '_builds/default/_deps/googletest-build/googletest/generated/gtest.pc'
+rm '_builds/default/_deps/googletest-build/googletest/generated/gtest_main.pc'
+rm '_builds/default/_deps/googletest-src'
+rm '_builds/default/_deps/googletest-subbuild/CMakeCache.txt'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/3.28.3/CMakeSystem.cmake'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/CMakeConfigureLog.yaml'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/CMakeRuleHashes.txt'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/Makefile.cmake'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/Makefile2'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/TargetDirectories.txt'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/cmake.check_cache'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/DependInfo.cmake'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.json'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.txt'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/build.make'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/cmake_clean.cmake'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.make'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.ts'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/progress.make'
+rm '_builds/default/_deps/googletest-subbuild/CMakeFiles/progress.marks'
+rm '_builds/default/_deps/googletest-subbuild/CMakeLists.txt'
+rm '_builds/default/_deps/googletest-subbuild/Makefile'
+rm '_builds/default/_deps/googletest-subbuild/cmake_install.cmake'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch-info.txt'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update-info.txt'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitclone.cmake'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake'
+rm '_builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake'
+rm '_builds/default/check'
+rm '_builds/default/check[1]_include.cmake'
+rm '_builds/default/check[1]_tests.cmake'
+rm '_builds/default/cmake_install.cmake'
+rm '_builds/default/lib/libgmock.a'
+rm '_builds/default/lib/libgmock_main.a'
+rm '_builds/default/lib/libgtest.a'
+rm '_builds/default/lib/libgtest_main.a'
+rm '_builds/default/libprint.a'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git config -f .gitmodules --remove-section submodule._builds/clang-cxx14/_deps/googletest-src 2>/dev/null
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git config -f .gitmodules --remove-section submodule._builds/default/_deps/googletest-src 2>/dev/null
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git config -f .git/config --remove-section submodule._builds/clang-cxx14/_deps/googletest-src 2>/dev/null
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git config -f .git/config --remove-section submodule._builds/default/_deps/googletest-src 2>/dev/null
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf .git/modules/_builds/
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git rm --cached -r third_party/googletest
+rm 'third_party/googletest'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf third_party/googletest
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf .git/modules/third_party/googletest
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git submodule add https://github.com/google/googletest.git third_party/googletest
+Cloning into '/home/ubuntu/KhotAbuch/workspace/lab08/third_party/googletest'...
+remote: Enumerating objects: 28129, done.
+remote: Counting objects: 100% (374/374), done.
+remote: Compressing objects: 100% (232/232), done.
+remote: Total 28129 (delta 256), reused 143 (delta 142), pack-reused 27755 (from 2)
+Receiving objects: 100% (28129/28129), 13.45 MiB | 14.82 MiB/s, done.
+Resolving deltas: 100% (20843/20843), done.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git submodule update --init --recursive
+Submodule 'tools/polly' (https://github.com/ruslo/polly) registered for path 'tools/polly'
+Cloning into '/home/ubuntu/KhotAbuch/workspace/lab08/tools/polly'...
+Submodule path 'tools/polly': checked out 'ef7e79c2c297d456f2742fd0b976f555d058d4e0'
+Submodule 'docs/rtfd-css' (https://github.com/ruslo/rtfd-css) registered for path 'tools/polly/docs/rtfd-css'
+Cloning into '/home/ubuntu/KhotAbuch/workspace/lab08/tools/polly/docs/rtfd-css'...
+Submodule path 'tools/polly/docs/rtfd-css': checked out '05ed4dcfde8a7fa09172de4699fc7a7043b7963c'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ echo "_builds/" >> .gitignore
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ echo "build/" >> .gitignore
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git add .gitignore
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git commit -m "Clean up submodules configuration"
+[main fd085f0] Clean up submodules configuration
+ 329 files changed, 6 insertions(+), 19153 deletions(-)
+ delete mode 100644 _builds/clang-cxx14/CMakeCache.txt
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/3.28.3/CMakeCCompiler.cmake
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake
+ delete mode 100755 _builds/clang-cxx14/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_C.bin
+ delete mode 100755 _builds/clang-cxx14/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_CXX.bin
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/3.28.3/CMakeSystem.cmake
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c
+ delete mode 100755 _builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdC/a.out
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ delete mode 100755 _builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/CMakeConfigureLog.yaml
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/Makefile.cmake
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/Makefile2
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/TargetDirectories.txt
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/DependInfo.cmake
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/build.make
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/cmake_clean.cmake
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/compiler_depend.make
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/compiler_depend.ts
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/depend.make
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/flags.make
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/link.txt
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/progress.make
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/tests/test1.cpp.o
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/tests/test1.cpp.o.d
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/cmake.check_cache
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/DependInfo.cmake
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/build.make
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/cmake_clean.cmake
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/cmake_clean_target.cmake
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/compiler_depend.make
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/compiler_depend.ts
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/depend.make
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/flags.make
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/link.txt
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/print.cpp.o
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/print.cpp.o.d
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/progress.make
+ delete mode 100644 _builds/clang-cxx14/CMakeFiles/progress.marks
+ delete mode 100644 _builds/clang-cxx14/CTestTestfile.cmake
+ delete mode 100644 _builds/clang-cxx14/Makefile
+ delete mode 100644 _builds/clang-cxx14/_3rdParty/polly/saved-arguments
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/CMakeFiles/progress.marks
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/CTestTestfile.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/Makefile
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/cmake_install.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/link.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/link.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/progress.marks
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CTestTestfile.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/Makefile
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/cmake_install.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-noconfig.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.ts
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/link.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/progress.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/link.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/progress.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/progress.marks
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CTestTestfile.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/Makefile
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/cmake_install.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/GTestConfig.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/GTestConfigVersion.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/gmock.pc
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/gmock_main.pc
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/gtest.pc
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/gtest_main.pc
+ delete mode 160000 _builds/clang-cxx14/_deps/googletest-src
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeCache.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/3.28.3/CMakeSystem.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/CMakeConfigureLog.yaml
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/CMakeRuleHashes.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/Makefile.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/Makefile2
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/TargetDirectories.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/cmake.check_cache
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/DependInfo.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.json
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/build.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/cmake_clean.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.ts
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/progress.make
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/progress.marks
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeLists.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/Makefile
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/cmake_install.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch-info.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update-info.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitclone.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake
+ delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake
+ delete mode 100755 _builds/clang-cxx14/check
+ delete mode 100644 _builds/clang-cxx14/check[1]_include.cmake
+ delete mode 100644 _builds/clang-cxx14/check[1]_tests.cmake
+ delete mode 100644 _builds/clang-cxx14/cmake_install.cmake
+ delete mode 100644 _builds/clang-cxx14/lib/libgmock.a
+ delete mode 100644 _builds/clang-cxx14/lib/libgmock_main.a
+ delete mode 100644 _builds/clang-cxx14/lib/libgtest.a
+ delete mode 100644 _builds/clang-cxx14/lib/libgtest_main.a
+ delete mode 100644 _builds/clang-cxx14/libprint.a
+ delete mode 100644 _builds/default/CMakeCache.txt
+ delete mode 100644 _builds/default/CMakeFiles/3.28.3/CMakeCCompiler.cmake
+ delete mode 100644 _builds/default/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake
+ delete mode 100755 _builds/default/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_C.bin
+ delete mode 100755 _builds/default/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_CXX.bin
+ delete mode 100644 _builds/default/CMakeFiles/3.28.3/CMakeSystem.cmake
+ delete mode 100644 _builds/default/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c
+ delete mode 100755 _builds/default/CMakeFiles/3.28.3/CompilerIdC/a.out
+ delete mode 100644 _builds/default/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ delete mode 100755 _builds/default/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+ delete mode 100644 _builds/default/CMakeFiles/CMakeConfigureLog.yaml
+ delete mode 100644 _builds/default/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 _builds/default/CMakeFiles/Makefile.cmake
+ delete mode 100644 _builds/default/CMakeFiles/Makefile2
+ delete mode 100644 _builds/default/CMakeFiles/TargetDirectories.txt
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/DependInfo.cmake
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/build.make
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/cmake_clean.cmake
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/compiler_depend.make
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/compiler_depend.ts
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/depend.make
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/flags.make
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/link.txt
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/progress.make
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/tests/test1.cpp.o
+ delete mode 100644 _builds/default/CMakeFiles/check.dir/tests/test1.cpp.o.d
+ delete mode 100644 _builds/default/CMakeFiles/cmake.check_cache
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/DependInfo.cmake
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/build.make
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/cmake_clean.cmake
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/cmake_clean_target.cmake
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/compiler_depend.make
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/compiler_depend.ts
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/depend.make
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/flags.make
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/link.txt
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/print.cpp.o
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/print.cpp.o.d
+ delete mode 100644 _builds/default/CMakeFiles/print.dir/progress.make
+ delete mode 100644 _builds/default/CMakeFiles/progress.marks
+ delete mode 100644 _builds/default/CTestTestfile.cmake
+ delete mode 100644 _builds/default/Makefile
+ delete mode 100644 _builds/default/Testing/Temporary/CTestCostData.txt
+ delete mode 100644 _builds/default/Testing/Temporary/LastTest.log
+ delete mode 100644 _builds/default/_3rdParty/polly/saved-arguments
+ delete mode 100644 _builds/default/_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/CMakeFiles/progress.marks
+ delete mode 100644 _builds/default/_deps/googletest-build/CTestTestfile.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/Makefile
+ delete mode 100644 _builds/default/_deps/googletest-build/cmake_install.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/link.txt
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/link.txt
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/progress.marks
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CTestTestfile.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/Makefile
+ delete mode 100644 _builds/default/_deps/googletest-build/googlemock/cmake_install.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-noconfig.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.ts
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/link.txt
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/progress.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/link.txt
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/progress.make
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/progress.marks
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/CTestTestfile.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/Makefile
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/cmake_install.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/GTestConfig.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/GTestConfigVersion.cmake
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/gmock.pc
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/gmock_main.pc
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/gtest.pc
+ delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/gtest_main.pc
+ delete mode 160000 _builds/default/_deps/googletest-src
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeCache.txt
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/3.28.3/CMakeSystem.cmake
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/CMakeConfigureLog.yaml
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/CMakeRuleHashes.txt
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/Makefile.cmake
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/Makefile2
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/TargetDirectories.txt
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/cmake.check_cache
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/DependInfo.cmake
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.json
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.txt
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/build.make
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/cmake_clean.cmake
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.make
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.ts
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/progress.make
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/progress.marks
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeLists.txt
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/Makefile
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/cmake_install.cmake
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch-info.txt
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update-info.txt
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitclone.cmake
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake
+ delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake
+ delete mode 100755 _builds/default/check
+ delete mode 100644 _builds/default/check[1]_include.cmake
+ delete mode 100644 _builds/default/check[1]_tests.cmake
+ delete mode 100644 _builds/default/cmake_install.cmake
+ delete mode 100644 _builds/default/lib/libgmock.a
+ delete mode 100644 _builds/default/lib/libgmock_main.a
+ delete mode 100644 _builds/default/lib/libgtest.a
+ delete mode 100644 _builds/default/lib/libgtest_main.a
+ delete mode 100644 _builds/default/libprint.a
+ create mode 160000 third_party/googletest
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ grep -r "googletest-src" .git/
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git remote remove origin
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab08
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat > Dockerfile <<EOF
+FROM ubuntu:18.04
+RUN apt update
+RUN apt install -yy gcc g++ cmake
+COPY . print/
+WORKDIR print
+RUN cmake -H. -B_build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_install
+RUN cmake --build _build
+RUN cmake --build _build --target install
+ENV LOG_PATH /home/logs/log.txt
+VOLUME /home/logs
+WORKDIR _install/bin
+ENTRYPOINT ./demo
+> EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build -t logger .
+[+] Building 31.0s (11/14)                                                             docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 372B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:18.04                                  2.5s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                    0.0s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => [1/9] FROM docker.io/library/ubuntu:18.04@sha256:152dc042452c496007f07ca9127571cb9c29697f42  2.9s
+ => => resolve docker.io/library/ubuntu:18.04@sha256:152dc042452c496007f07ca9127571cb9c29697f42  0.0s
+ => => sha256:152dc042452c496007f07ca9127571cb9c29697f42acbfad72324b2bb2e43c98 1.33kB / 1.33kB   0.0s
+ => => sha256:f97a5103cca28097326814718e711c9c41b54853c26959d73495e40b1dd608f2 424B / 424B       0.0s
+ => => sha256:d1a528908992e9b5bcff8329a22de1749007d0eeeccb93ab85dd5a822b8d46a0 2.31kB / 2.31kB   0.0s
+ => => sha256:064a9bb4736de1b2446f528e4eb37335378392cf9b95043d3e9970e25386170 22.71MB / 22.71MB  2.3s
+ => => extracting sha256:064a9bb4736de1b2446f528e4eb37335378392cf9b95043d3e9970e253861702        0.6s
+ => [internal] load build context                                                                0.1s
+ => => transferring context: 27.51MB                                                             0.1s
+ => [2/9] RUN apt update                                                                        13.8s
+ => [3/9] RUN apt install -yy gcc g++ cmake                                                     11.4s 
+ => [4/9] COPY . print/                                                                          0.1s 
+ => [5/9] WORKDIR print                                                                          0.0s 
+ => ERROR [6/9] RUN cmake -H. -B_build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_insta  0.1s 
+------                                                                                                
+ > [6/9] RUN cmake -H. -B_build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_install:           
+0.091 CMake Error: The current CMakeCache.txt directory /print/_build/CMakeCache.txt is different than the directory /home/ubuntu/KhotAbuch/workspace/projects/lab06/_build where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt                                                                                              
+0.091 CMake Error: The source "/print/CMakeLists.txt" does not match the source "/home/ubuntu/KhotAbuch/workspace/projects/lab06/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.
+------
+
+ 3 warnings found (use docker --debug to expand):
+ - WorkdirRelativePath: Relative workdir "print" can have unexpected results if the base image changes (line 5)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 9)
+ - JSONArgsRecommended: JSON arguments recommended for ENTRYPOINT to prevent unintended behavior related to OS signals (line 12)
+Dockerfile:6
+--------------------
+   4 |     COPY . print/
+   5 |     WORKDIR print
+   6 | >>> RUN cmake -H. -B_build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_install
+   7 |     RUN cmake --build _build
+   8 |     RUN cmake --build _build --target install
+--------------------
+ERROR: failed to solve: process "/bin/sh -c cmake -H. -B_build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_install" did not complete successfully: exit code: 1
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$  cat > Dockerfile <<EOF
+> FROM ubuntu:22.04
+
+# Установка зависимостей с очисткой кеша
+RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make && \
+    rm -rf /var/lib/apt/lists/*
+
+# Копирование исходников
+COPY . /print
+WORKDIR /print
+
+# Сборка проекта (с отключением тестов если нужно)
+RUN cmake -H. -B_build \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=_install \
+    -DBUILD_TESTS=OFF && \
+    cmake --build _build && \
+    cmake --build _build --target install
+
+# Настройка логирования
+RUN mkdir -p /home/logs
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+# Точка входа
+WORKDIR /print/_install/bin
+ENTRYPOINT ["./demo", "--console"]
+> EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build -t logger .
+[+] Building 22.7s (9/11)                                                              docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 805B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  1.2s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => [1/7] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879ae3cced  1.7s
+ => => resolve docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879ae3cced  0.0s
+ => => sha256:01a3ee0b5e413cefaaffc6abe68c9c37879ae3cced56a8e088b1649e5b269eee 6.69kB / 6.69kB   0.0s
+ => => sha256:103c9bebe997b8f0f71868e30217cebffc3bce08337c6ae6c6beac31634c1546 424B / 424B       0.0s
+ => => sha256:e3bfc62a544b4018f3a84c10c0cbe77396259bd1558afff1607eb6415f2eb3c3 2.31kB / 2.31kB   0.0s
+ => => sha256:0e25612b6db22df273732c47faba1dd81735a0dd9f6ea27b5222f281d67409f 27.36MB / 27.36MB  0.9s
+ => => extracting sha256:0e25612b6db22df273732c47faba1dd81735a0dd9f6ea27b5222f281d67409f5        0.6s
+ => [internal] load build context                                                                0.0s
+ => => transferring context: 94.89kB                                                             0.0s
+ => [2/7] RUN apt update && apt install -yy     gcc     g++     cmake     git     make &&       19.4s
+ => [3/7] COPY . /print                                                                          0.1s 
+ => [4/7] WORKDIR /print                                                                         0.0s 
+ => ERROR [5/7] RUN cmake -H. -B_build     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFI  0.1s 
+------                                                                                                
+ > [5/7] RUN cmake -H. -B_build     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=_install     -DBUILD_TESTS=OFF &&     cmake --build _build &&     cmake --build _build --target install:          
+0.130 CMake Error: The current CMakeCache.txt directory /print/_build/CMakeCache.txt is different than the directory /home/ubuntu/KhotAbuch/workspace/projects/lab06/_build where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+0.130 CMake Error: The source "/print/CMakeLists.txt" does not match the source "/home/ubuntu/KhotAbuch/workspace/projects/lab06/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.
+------
+Dockerfile:11
+--------------------
+   9 |     
+  10 |     # Сборка проекта (с отключением тестов если нужно)
+  11 | >>> RUN cmake -H. -B_build     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=_install     -DBUILD_TESTS=OFF &&     cmake --build _build &&     cmake --build _build --target install
+  12 |     
+  13 |     # Настройка логирования
+--------------------
+ERROR: failed to solve: process "/bin/sh -c cmake -H. -B_build     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=_install     -DBUILD_TESTS=OFF &&     cmake --build _build &&     cmake --build _build --target install" did not complete successfully: exit code: 1
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ ls
+artifacts     cmake              DESCRIPTION  lab02.txt  lab06.txt  README.md    tools
+_build        CMakeLists.txt     Dockerfile   lab03.txt  lab07.txt  sources
+build         CPackConfig.cmake  file.txt     lab04.txt  _logs      tests
+ChangeLog.md  demo               include      lab05.txt  print.cpp  third_party
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ nano  CMakeLists.txt   
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat > Dockerfile <<'EOF'
+FROM ubuntu:22.04
+
+# Установка зависимостей с очисткой кеша
+RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make && \
+    rm -rf /var/lib/apt/lists/*
+
+# Создаем рабочую директорию
+WORKDIR /app
+
+# Копирование только необходимых файлов
+COPY CMakeLists.txt print.cpp demo/ include/ third_party/ ./
+
+# Очистка возможных артефактов предыдущей сборки
+RUN rm -rf _build _install
+
+# Сборка проекта
+RUN cmake -H. -B_build \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=_install \
+    -DBUILD_TESTS=OFF && \
+    cmake --build _build && \
+    cmake --build _build --target install
+
+# Настройка логирования
+RUN mkdir -p /home/logs
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+# Точка входа
+WORKDIR /app/_install/bin
+ENTRYPOINT ["./demo", "--console"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker system prune -f
+Deleted Containers:
+fd279fd06f80ac853c2efa0a7705d7ca2bdb43a56c2c1af340aad8f5dac37ca6
+6b42f7a7a467402f378a02dc6ff548554a893117c8a4ae65d61ba99227cea059
+146e6f5d12675c6ed80e1ce7e4658620baa10a3856c66f046ab8af7d8e0c7eaf
+9b6396cb21f37bfe0ec233e4b7c9f3e841dd5299c3fb62a4687745fe79ba3ca0
+8957330e59127297808e54e995cc1e52fc7c7f4894c45d2dbe1c4ebf28dd2f22
+65f17665c94fc98bac59b92bcbad7520195f4388c2baabd8a8689902fe90ae05
+
+Deleted Images:
+deleted: sha256:a6a7e6457c3bbc4dc7a1cdbfdbb668bd67de14a5f4c12f9544627207e0deb598
+deleted: sha256:f080896bb7d639b0455f825ba0aa0f340859d8594f3a7ab463aa5e2c1d33f119
+
+Deleted build cache objects:
+8z8ywgl3gkxl6tb76dhug6coc
+t6j72rv3gf0qogquondaa9ke8
+ziul9dg6o5tp6fpqmb6lhxcy2
+jzb8zmeau5fic56qdr9zl0z9i
+kp7fv47irp7e7nv5tjf8twfxv
+k8w6gxvdu02n3mve49aqadv3w
+01yvsm97jog8nsrrljbr4cvh8
+5f7xxaadi0eak9xsmyaq8uwew
+k9qo6y58lecwrjlynir7ob3qi
+4lc1s9fhm5ig5hf17tt3vkjzi
+slc3zeoe3abd5olab44at5vlh
+39001b3ayakv748wzi76lrprz
+5d7hy6oii4ogi42vcfxp976xo
+vrvo9ngljh3489x2yj00944le
+x42lpyarjcy0vznxmmiuqtx1i
+t65q3o1w0dvivhk12prfu1dds
+y0s6qub003jiz0jfw73ezr42b
+vfnl49dp8y7vk7mmvhpunoztf
+euj7gaaayvh1jj4qg8elv39t7
+vwbzpbrs3niuznaar2ffqvzqb
+axxvraofx23ofyb0t6e2z4anw
+qffdes3jbla1bv6f43217ac0e
+q6242a4j6y9qzox82oau0gj2j
+g9p9r728cflehj89m07p3zv69
+t3ervazy896qd5e7dvqj3vq8e
+o575l1eqzbr6a46wz9b8vgqy7
+
+Total reclaimed space: 1.039GB
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build -t logger .
+[+] Building 23.2s (13/13) FINISHED                                                    docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 1.01kB                                                           0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  1.2s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => [1/8] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879ae3cced  1.6s
+ => => resolve docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879ae3cced  0.0s
+ => => sha256:01a3ee0b5e413cefaaffc6abe68c9c37879ae3cced56a8e088b1649e5b269eee 6.69kB / 6.69kB   0.0s
+ => => sha256:103c9bebe997b8f0f71868e30217cebffc3bce08337c6ae6c6beac31634c1546 424B / 424B       0.0s
+ => => sha256:e3bfc62a544b4018f3a84c10c0cbe77396259bd1558afff1607eb6415f2eb3c3 2.31kB / 2.31kB   0.0s
+ => => sha256:0e25612b6db22df273732c47faba1dd81735a0dd9f6ea27b5222f281d67409f 27.36MB / 27.36MB  0.9s
+ => => extracting sha256:0e25612b6db22df273732c47faba1dd81735a0dd9f6ea27b5222f281d67409f5        0.6s
+ => [internal] load build context                                                                0.1s
+ => => transferring context: 4.12MB                                                              0.0s
+ => [2/8] RUN apt update && apt install -yy     gcc     g++     cmake     git     make &&       18.9s
+ => [3/8] WORKDIR /app                                                                           0.0s 
+ => [4/8] COPY CMakeLists.txt print.cpp demo/ include/ third_party/ ./                           0.1s 
+ => [5/8] RUN rm -rf _build _install                                                             0.1s 
+ => [6/8] RUN cmake -H. -B_build     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=_ins  0.4s 
+ => [7/8] RUN mkdir -p /home/logs                                                                0.1s 
+ => [8/8] WORKDIR /app/_install/bin                                                              0.0s 
+ => exporting to image                                                                           0.7s 
+ => => exporting layers                                                                          0.7s 
+ => => writing image sha256:87cc41b2a17ffd6eb6ec86d0d8682637aabe86ae36f31d7b56246c181b0f7939     0.0s 
+ => => naming to docker.io/library/logger                                                        0.0s 
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+logger       latest    87cc41b2a17f   10 seconds ago   412MB
+<none>       <none>    49cadb0f10dc   13 days ago      427MB
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ mkdir logs
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker run -it -v "$(pwd)/logs/:/home/logs/" logger
+text1
+text2
+text3
+<C-D>
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: exec: "./demo": stat ./demo: no such file or directory: unknown
+
+Run 'docker run --help' for more information
+text1: command not found
+text2: command not found
+text3: command not found
+-bash: syntax error near unexpected token `newline'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build --no-cache -t logger .
+[+] Building 32.4s (14/14) FINISHED                                                    docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 1.01kB                                                           0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  0.9s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                    0.0s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => CACHED [1/8] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879  0.0s
+ => [internal] load build context                                                                0.0s
+ => => transferring context: 22.30kB                                                             0.0s
+ => [2/8] RUN apt update && apt install -yy     gcc     g++     cmake     git     make &&       29.9s
+ => [3/8] WORKDIR /app                                                                           0.0s 
+ => [4/8] COPY CMakeLists.txt print.cpp demo/ include/ third_party/ ./                           0.1s 
+ => [5/8] RUN rm -rf _build _install                                                             0.2s 
+ => [6/8] RUN cmake -H. -B_build     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=_ins  0.4s 
+ => [7/8] RUN mkdir -p /home/logs                                                                0.1s 
+ => [8/8] WORKDIR /app/_install/bin                                                              0.0s 
+ => exporting to image                                                                           0.7s 
+ => => exporting layers                                                                          0.7s 
+ => => writing image sha256:27d02a8101955b420cf02098c3e4a33ece610c6c0713b52e74ceca8afd903aeb     0.0s 
+ => => naming to docker.io/library/logger                                                        0.0s 
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker run -it --rm -v "$(pwd)/logs:/home/logs" logger
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: exec: "./demo": stat ./demo: no such file or directory: unknown
+
+Run 'docker run --help' for more information
+
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ ls
+artifacts     cmake              DESCRIPTION  lab02.txt  lab06.txt  print.cpp  third_party
+_build        CMakeLists.txt     Dockerfile   lab03.txt  lab07.txt  README.md  tools
+build         CPackConfig.cmake  file.txt     lab04.txt  _logs      sources
+ChangeLog.md  demo               include      lab05.txt  logs       tests
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ nano Dockerfile
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > Dockerfile
+FROM ubuntu:22.04
+
+RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make \
+    pkg-config && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY CMakeLists.txt print.cpp demo/ include/ third_party/ .gitmodules ./
+
+RUN git submodule update --init --recursive
+
+RUN mkdir -p _build
+
+RUN cd _build && \
+    cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/app/_install \
+    -DBUILD_TESTS=OFF && \
+    cmake --build . --parallel $(nproc) && \
+    cmake --install .
+
+RUN test -f /app/_install/bin/demo || (echo "Error: demo executable not found!" && exit 1)
+
+RUN chmod +x /app/_install/bin/demo && \
+    mkdir -p /home/logs && \
+    chmod 777 /home/logs
+
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+WORKDIR /app/_install/bin
+CMD ["./demo", "--console"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build -t logger .
+[+] Building 23.1s (10/15)                                                             docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 875B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  1.0s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                    0.0s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => CACHED [ 1/10] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c378  0.0s
+ => [internal] load build context                                                                0.0s
+ => => transferring context: 22.54kB                                                             0.0s
+ => [ 2/10] RUN apt update && apt install -yy     gcc     g++     cmake     git     make     p  21.8s
+ => [ 3/10] WORKDIR /app                                                                         0.0s 
+ => [ 4/10] COPY CMakeLists.txt print.cpp demo/ include/ third_party/ .gitmodules ./             0.1s 
+ => ERROR [ 5/10] RUN git submodule update --init --recursive                                    0.1s 
+------                                                                                                
+ > [ 5/10] RUN git submodule update --init --recursive:                                               
+0.128 fatal: not a git repository (or any of the parent directories): .git                            
+------
+Dockerfile:17
+--------------------
+  15 |     COPY CMakeLists.txt print.cpp demo/ include/ third_party/ .gitmodules ./
+  16 |     
+  17 | >>> RUN git submodule update --init --recursive
+  18 |     
+  19 |     RUN mkdir -p _build
+--------------------
+ERROR: failed to solve: process "/bin/sh -c git submodule update --init --recursive" did not complete successfully: exit code: 128
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > Dockerfile
+FROM ubuntu:22.04
+
+RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make \
+    pkg-config && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY . .
+
+RUN mkdir -p _build && \
+    cd _build && \
+    cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/app/_install \
+    -DBUILD_TESTS=OFF && \
+    cmake --build . --parallel $(nproc) && \
+    cmake --install .
+
+RUN test -f /app/_install/bin/demo || (echo "Error: demo executable not found!" && exit 1)
+
+RUN chmod +x /app/_install/bin/demo && \
+    mkdir -p /home/logs && \
+    chmod 777 /home/logs
+
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+WORKDIR /app/_install/bin
+CMD ["./demo", "--console"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build -t logger .
+[+] Building 1.2s (9/12)                                                               docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 770B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  0.5s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => [1/8] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879ae3cced  0.0s
+ => [internal] load build context                                                                0.3s
+ => => transferring context: 23.41MB                                                             0.2s
+ => CACHED [2/8] RUN apt update && apt install -yy     gcc     g++     cmake     git     make    0.0s
+ => CACHED [3/8] WORKDIR /app                                                                    0.0s
+ => [4/8] COPY . .                                                                               0.2s
+ => ERROR [5/8] RUN mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Rel  0.2s
+------                                                                                                
+ > [5/8] RUN mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=/app/_install     -DBUILD_TESTS=OFF &&     cmake --build . --parallel $(nproc) &&     cmake --install .:                                                                                  
+0.150 CMake Error: The current CMakeCache.txt directory /app/_build/CMakeCache.txt is different than the directory /home/ubuntu/KhotAbuch/workspace/projects/lab06/_build where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+0.150 CMake Error: The source "/app/CMakeLists.txt" does not match the source "/home/ubuntu/KhotAbuch/workspace/projects/lab06/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.
+------
+Dockerfile:17
+--------------------
+  16 |     
+  17 | >>> RUN mkdir -p _build && \
+  18 | >>>     cd _build && \
+  19 | >>>     cmake .. \
+  20 | >>>     -DCMAKE_BUILD_TYPE=Release \
+  21 | >>>     -DCMAKE_INSTALL_PREFIX=/app/_install \
+  22 | >>>     -DBUILD_TESTS=OFF && \
+  23 | >>>     cmake --build . --parallel $(nproc) && \
+  24 | >>>     cmake --install .
+  25 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=/app/_install     -DBUILD_TESTS=OFF &&     cmake --build . --parallel $(nproc) &&     cmake --install ." did not complete successfully: exit code: 1
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > Dockerfile
+FROM ubuntu:22.04
+
+RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make \
+    pkg-config && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY CMakeLists.txt print.cpp demo/ include/ third_party/ ./
+
+RUN cd third_party/googletest && git init && \
+    mkdir -p _build && \
+    cd _build && \
+    cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/app/_install \
+    -DBUILD_TESTS=OFF && \
+    cmake --build . --parallel $(nproc) && \
+    cmake --install .
+
+RUN test -f /app/_install/bin/demo || (echo "Error: demo executable not found!" && exit 1)
+
+RUN chmod +x /app/_install/bin/demo && \
+    mkdir -p /home/logs && \
+    chmod 777 /home/logs
+
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+WORKDIR /app/_install/bin
+CMD ["./demo", "--console"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build -t logger .
+[+] Building 0.8s (9/12)                                                               docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 869B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  0.5s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => [1/8] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879ae3cced  0.0s
+ => [internal] load build context                                                                0.0s
+ => => transferring context: 22.30kB                                                             0.0s
+ => CACHED [2/8] RUN apt update && apt install -yy     gcc     g++     cmake     git     make    0.0s
+ => CACHED [3/8] WORKDIR /app                                                                    0.0s
+ => [4/8] COPY CMakeLists.txt print.cpp demo/ include/ third_party/ ./                           0.1s
+ => ERROR [5/8] RUN cd third_party/googletest && git init &&     mkdir -p _build &&     cd _bui  0.1s
+------
+ > [5/8] RUN cd third_party/googletest && git init &&     mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=/app/_install     -DBUILD_TESTS=OFF &&     cmake --build . --parallel $(nproc) &&     cmake --install .:
+0.097 /bin/sh: 1: cd: can't cd to third_party/googletest
+------
+Dockerfile:17
+--------------------
+  16 |     
+  17 | >>> RUN cd third_party/googletest && git init && \
+  18 | >>>     mkdir -p _build && \
+  19 | >>>     cd _build && \
+  20 | >>>     cmake .. \
+  21 | >>>     -DCMAKE_BUILD_TYPE=Release \
+  22 | >>>     -DCMAKE_INSTALL_PREFIX=/app/_install \
+  23 | >>>     -DBUILD_TESTS=OFF && \
+  24 | >>>     cmake --build . --parallel $(nproc) && \
+  25 | >>>     cmake --install .
+  26 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c cd third_party/googletest && git init &&     mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=/app/_install     -DBUILD_TESTS=OFF &&     cmake --build . --parallel $(nproc) &&     cmake --install ." did not complete successfully: exit code: 2
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > Dockerfile
+FROM ubuntu:22.04
+
+RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make \
+    pkg-config && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY . .
+
+RUN rm -rf _build _install && \
+    mkdir -p _build && \
+    cd _build && \
+    cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/app/_install \
+    -DBUILD_TESTS=OFF && \
+    cmake --build . --parallel $(nproc) && \
+    cmake --install .
+
+RUN test -f /app/_install/bin/demo || (echo "Error: demo executable not found!" && exit 1)
+
+RUN chmod +x /app/_install/bin/demo && \
+    mkdir -p /home/logs && \
+    chmod 777 /home/logs
+
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+WORKDIR /app/_install/bin
+CMD ["./demo", "--console"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build --no-cache -t logger .
+[+] Building 30.1s (10/12)                                                             docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 802B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  0.6s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => CACHED [1/8] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879  0.0s
+ => [internal] load build context                                                                0.2s
+ => => transferring context: 23.41MB                                                             0.2s
+ => [2/8] RUN apt update && apt install -yy     gcc     g++     cmake     git     make     pkg  28.7s
+ => [3/8] WORKDIR /app                                                                           0.0s 
+ => [4/8] COPY . .                                                                               0.2s 
+ => [5/8] RUN rm -rf _build _install &&     mkdir -p _build &&     cd _build &&     cmake ..     0.4s 
+ => ERROR [6/8] RUN test -f /app/_install/bin/demo || (echo "Error: demo executable not found!"  0.1s 
+------                                                                                                
+ > [6/8] RUN test -f /app/_install/bin/demo || (echo "Error: demo executable not found!" && exit 1):  
+0.099 Error: demo executable not found!                                                               
+------                                                                                                
+Dockerfile:27                                                                                         
+--------------------
+  25 |         cmake --install .
+  26 |     
+  27 | >>> RUN test -f /app/_install/bin/demo || (echo "Error: demo executable not found!" && exit 1)
+  28 |     
+  29 |     RUN chmod +x /app/_install/bin/demo && \
+--------------------
+ERROR: failed to solve: process "/bin/sh -c test -f /app/_install/bin/demo || (echo \"Error: demo executable not found!\" && exit 1)" did not complete successfully: exit code: 1
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > Dockerfile
+FROM ubuntu:22.04
+> RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make \
+    pkg-config && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+> COPY CMakeLists.txt print.cpp demo/ include/ ./
+> RUN mkdir -p _build && \
+    cd _build && \
+    cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/app/_install && \
+    cmake --build . --parallel $(nproc) && \
+    cmake --install . && \
+    ls -la /app/_install/bin/
+> RUN ls -la /app/_install/ && \
+    ls -la /app/_install/bin/
+> RUN mkdir -p /home/logs && \
+    chmod 777 /home/logs
+> ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+WORKDIR /app/_install/bin
+CMD ["./demo"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker system prune -f
+Deleted Containers:
+2b0fdb0c5c5c66ee41d04f83639975fc472c76a78acaffe70c6801bfd08b2952
+
+Deleted Images:
+deleted: sha256:49cadb0f10dc53df78365b671edc4fd6cb02b862498af30494142135e423291c
+deleted: sha256:87cc41b2a17ffd6eb6ec86d0d8682637aabe86ae36f31d7b56246c181b0f7939
+
+Deleted build cache objects:
+ya1wcba0h0843w2ulhzn2qkfy
+6b98d8wlndet82e2flbw2bb4g
+il5xk9u15otd4bjyj7v3r4a2x
+wco44tz6wmd4y665kr3xjt34f
+41y9lf2nhp711qd183fjtfa0j
+ot81llovsuhoy8pl2uknw33y0
+sfb4ktg64eptbr8ygarabsu6q
+91n51yniv2nq1eewoknb4pxv1
+vitxhnuq2jbw9jcqnd6bvtui4
+0iqubk3cvcx32wh6mgpeh57b8
+ppfkk4rfoj4fnn6necyolqlhd
+44g1xnqxggepcsd5xqvca7613
+sdaf7gpn0a375p6gldwi5v5hz
+kibfce5phmfyq4itgvcio9vyi
+l77blauztyn6ox9jduusbbpui
+5bnsad1pwjh5ws9kkuritetvt
+6s5nvwm1vxfl55u3mklc6jmvn
+ln3srcrbkisxo6ormgzzk7kqd
+t9gcx1nhtx9zry82jz2ru6kax
+6d80aipjvl9yjilykjqalre9p
+e6ivi27253l557dnatun3he01
+lw4wowe1ivl8biz5rs01aaowo
+whsajrscuqkr1vowm9oyjoadv
+vkphthl0d67fcayi6uwvwnpe2
+ltt0e7mp52veag9nt45biy6sv
+3v1vk5vm3epzhdcxkq81aobd8
+
+Total reclaimed space: 1.488GB
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build --no-cache -t logger . | tee build.log
+[+] Building 22.1s (9/12)                                                              docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 735B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  0.6s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => CACHED [1/8] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879  0.0s
+ => [internal] load build context                                                                0.0s
+ => => transferring context: 2.55kB                                                              0.0s
+ => [2/8] RUN apt update && apt install -yy     gcc     g++     cmake     git     make     pkg  18.9s
+ => [3/8] WORKDIR /app                                                                           0.0s 
+ => [4/8] COPY CMakeLists.txt print.cpp demo/ include/ ./                                        0.0s 
+ => ERROR [5/8] RUN mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Rel  2.5s 
+------                                                                                                
+ > [5/8] RUN mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=/app/_install &&     cmake --build . --parallel $(nproc) &&     cmake --install . &&     ls -la /app/_install/bin/:                                                                       
+0.188 -- The CXX compiler identification is GNU 11.4.0                                                
+0.192 -- Detecting CXX compiler ABI info                                                              
+0.227 -- Detecting CXX compiler ABI info - done
+0.231 -- Check for working CXX compiler: /usr/bin/c++ - skipped
+0.231 -- Detecting CXX compile features
+0.232 -- Detecting CXX compile features - done
+2.357 -- The C compiler identification is GNU 11.4.0
+2.360 -- Detecting C compiler ABI info
+2.388 -- Detecting C compiler ABI info - done
+2.392 -- Check for working C compiler: /usr/bin/cc - skipped
+2.392 -- Detecting C compile features
+2.392 -- Detecting C compile features - done
+2.407 -- Could NOT find Python (missing: Python_EXECUTABLE Interpreter) 
+2.408 -- Looking for pthread.h
+2.436 -- Looking for pthread.h - found
+2.436 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+2.465 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+2.465 -- Found Threads: TRUE  
+2.468 -- Configuring done
+2.469 CMake Error at CMakeLists.txt:31 (add_executable):
+2.469   Cannot find source file:
+2.469 
+2.469     tests/test1.cpp
+2.469 
+2.469   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+2.469   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+2.469 
+2.469 
+2.469 CMake Error at CMakeLists.txt:31 (add_executable):
+2.469   No SOURCES given to target: check
+2.469 
+2.469 
+2.469 CMake Generate step failed.  Build files cannot be regenerated correctly.
+------
+Dockerfile:16
+--------------------
+  15 |     COPY CMakeLists.txt print.cpp demo/ include/ ./
+  16 | >>> RUN mkdir -p _build && \
+  17 | >>>     cd _build && \
+  18 | >>>     cmake .. \
+  19 | >>>     -DCMAKE_BUILD_TYPE=Release \
+  20 | >>>     -DCMAKE_INSTALL_PREFIX=/app/_install && \
+  21 | >>>     cmake --build . --parallel $(nproc) && \
+  22 | >>>     cmake --install . && \
+  23 | >>>     ls -la /app/_install/bin/
+  24 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=/app/_install &&     cmake --build . --parallel $(nproc) &&     cmake --install . &&     ls -la /app/_install/bin/" did not complete successfully: exit code: 1
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ ls -la demo/main.cpp
+-rw-rw-r-- 1 ubuntu ubuntu 404 Jun  8 04:02 demo/main.cpp
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat CMakeLists.txt | grep -A5 "add_executable"
+    add_executable(check tests/test1.cpp)
+    target_link_libraries(check PRIVATE print GTest::gtest_main)
+    target_include_directories(check PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    
+    include(GoogleTest)
+    gtest_discover_tests(check)
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > Dockerfile
+FROM ubuntu:22.04
+> RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make \
+    pkg-config && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+> COPY CMakeLists.txt print.cpp demo/ include/ ./
+> RUN mkdir -p _build && \
+    cd _build && \
+    cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/app/_install \
+    -DBUILD_TESTS=OFF && \
+    cmake --build . --target demo --parallel $(nproc) && \
+    cmake --install . && \
+    ls -la /app/_install/bin/
+> RUN test -f /app/_install/bin/demo || (echo "Error: demo executable not found!" && exit 1)
+> RUN chmod +x /app/_install/bin/demo && \
+    mkdir -p /home/logs && \
+    chmod 777 /home/logs
+
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+WORKDIR /app/_install/bin
+CMD ["./demo"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker system prune -f
+Deleted build cache objects:
+w39nu5m0y087u6nqtsacyk5sn
+pjqkwjvf6wzfjdqkphj34jhtv
+m6a6jjk2vx7fmtzmehcvkuepn
+li528frnogv9jsuii5augbxmj
+x3iv7ffud1lxo8kzg3p06sugl
+lb7zr9sbbrrtejxky0tlwf2io
+
+Total reclaimed space: 348.6MB
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build --no-cache -t logger .
+[+] Building 31.2s (10/13)                                                             docker:default
+ => [internal] load build definition from Dockerfile                                             0.1s
+ => => transferring dockerfile: 844B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  1.3s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                    0.0s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => CACHED [1/8] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879  0.0s
+ => [internal] load build context                                                                0.0s
+ => => transferring context: 2.55kB                                                              0.0s
+ => [2/8] RUN apt update && apt install -yy     gcc     g++     cmake     git     make     pkg  29.5s
+ => [3/8] WORKDIR /app                                                                           0.1s 
+ => [4/8] COPY CMakeLists.txt print.cpp demo/ include/ ./                                        0.0s 
+ => ERROR [5/8] RUN mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Rel  0.2s 
+------                                                                                                
+ > [5/8] RUN mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=/app/_install     -DBUILD_TESTS=OFF &&     cmake --build . --target demo --parallel $(nproc) &&     cmake --install . &&     ls -la /app/_install/bin/:
+0.170 -- The CXX compiler identification is GNU 11.4.0
+0.173 -- Detecting CXX compiler ABI info
+0.210 -- Detecting CXX compiler ABI info - done
+0.213 -- Check for working CXX compiler: /usr/bin/c++ - skipped
+0.213 -- Detecting CXX compile features
+0.214 -- Detecting CXX compile features - done
+0.214 -- Configuring done
+0.215 -- Generating done
+0.216 -- Build files have been written to: /app/_build
+0.220 gmake: *** No rule to make target 'demo'.  Stop.
+------
+Dockerfile:16
+--------------------
+  15 |     
+  16 | >>> RUN mkdir -p _build && \
+  17 | >>>     cd _build && \
+  18 | >>>     cmake .. \
+  19 | >>>     -DCMAKE_BUILD_TYPE=Release \
+  20 | >>>     -DCMAKE_INSTALL_PREFIX=/app/_install \
+  21 | >>>     -DBUILD_TESTS=OFF && \
+  22 | >>>     cmake --build . --target demo --parallel $(nproc) && \
+  23 | >>>     cmake --install . && \
+  24 | >>>     ls -la /app/_install/bin/
+  25 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c mkdir -p _build &&     cd _build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DCMAKE_INSTALL_PREFIX=/app/_install     -DBUILD_TESTS=OFF &&     cmake --build . --target demo --parallel $(nproc) &&     cmake --install . &&     ls -la /app/_install/bin/" did not complete successfully: exit code: 2
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ mkdir -p build && cd build
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ cmake .. -DBUILD_TESTS=OFF
+CMake Error: The current CMakeCache.txt directory /home/ubuntu/KhotAbuch/workspace/lab08/build/CMakeCache.txt is different than the directory /home/ubuntu/KhotAbuch/workspace/projects/lab07/build where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+CMake Error: The source "/home/ubuntu/KhotAbuch/workspace/lab08/CMakeLists.txt" does not match the source "/home/ubuntu/KhotAbuch/workspace/projects/lab07/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ cd .
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ cd ..
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ ls
+artifacts  ChangeLog.md       demo         include    lab05.txt  logs       tests
+_build     cmake              DESCRIPTION  lab02.txt  lab06.txt  print.cpp  third_party
+build      CMakeLists.txt     Dockerfile   lab03.txt  lab07.txt  README.md  tools
+build.log  CPackConfig.cmake  file.txt     lab04.txt  _logs      sources
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ echo Dockerfile
+Dockerfile
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ nano Dockerfile
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > CMakeLists.txt
+cmake_minimum_required(VERSION 3.14)
+project(print VERSION 0.1.0 LANGUAGES CXX)
+
+# Version settings
+set(PRINT_VERSION_MAJOR 0)
+set(PRINT_VERSION_MINOR 1)
+set(PRINT_VERSION_PATCH 0)
+set(PRINT_VERSION "${PRINT_VERSION_MAJOR}.${PRINT_VERSION_MINOR}.${PRINT_VERSION_PATCH}")
+set(PRINT_VERSION_STRING "v${PRINT_VERSION}")
+
+# Main library
+add_library(print STATIC print.cpp)
+target_include_directories(print PUBLIC 
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+# Demo application
+add_executable(demo demo/main.cpp)
+target_link_libraries(demo print)
+install(TARGETS demo RUNTIME DESTINATION bin)
+
+# Tests
+option(BUILD_TESTS "Build tests" ON)
+
+if(BUILD_TESTS)
+    include(FetchContent)
+    FetchContent_Declare(
+        googletest
+        GIT_REPOSITORY https://github.com/google/googletest.git
+        GIT_TAG release-1.12.1
+    )
+    FetchContent_MakeAvailable(googletest)
+
+    enable_testing()
+    
+    add_executable(check tests/test1.cpp)
+    target_link_libraries(check PRIVATE print GTest::gtest_main)
+    target_include_directories(check PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    
+    include(GoogleTest)
+    gtest_discover_tests(check)
+endif()
+
+# Installation
+install(TARGETS print
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
+    PUBLIC_HEADER DESTINATION include
+)
+
+# CPack
+include(InstallRequiredSystemLibraries)
+set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+set(CPACK_PACKAGE_VENDOR "KhotAbuch")
+set(CPACK_PACKAGE_CONTACT "quentinthanks@yandex.ru")
+set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Static print library")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > Dockerfile
+FROM ubuntu:22.04
+
+RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make \
+    pkg-config && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY . .
+
+RUN mkdir -p build && \
+    cd build && \
+    cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DBUILD_TESTS=OFF && \
+    cmake --build . --target demo --parallel $(nproc) && \
+    cmake --install . && \
+    ls -la /usr/local/bin/demo
+
+RUN chmod +x /usr/local/bin/demo && \
+    mkdir -p /home/logs && \
+    chmod 777 /home/logs
+
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+WORKDIR /home/logs
+CMD ["/usr/local/bin/demo"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker system prune -f
+Deleted build cache objects:
+x12jvfvan54t9abynx6a3lxie
+uu75kp094jn96a7bktn4htxuj
+yacvbaryo9u90yn8yl4o8rppt
+uekxx4udsuz7ve40x24rim222
+w41eo06msz1vh2vvbkcvlqg8m
+h0r4axjtf6c4xhih4nvcvurf3
+
+Total reclaimed space: 348.6MB
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf build _build _install
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build --no-cache -t logger .
+[+] Building 21.1s (9/11)                                                              docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 673B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  0.5s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => [internal] load build context                                                                0.2s
+ => => transferring context: 26.70MB                                                             0.2s
+ => CACHED [1/7] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879  0.0s
+ => [2/7] RUN apt update && apt install -yy     gcc     g++     cmake     git     make     pkg  19.8s
+ => [3/7] WORKDIR /app                                                                           0.0s 
+ => [4/7] COPY . .                                                                               0.1s 
+ => ERROR [5/7] RUN mkdir -p build &&     cd build &&     cmake ..     -DCMAKE_BUILD_TYPE=Relea  0.6s 
+------                                                                                                
+ > [5/7] RUN mkdir -p build &&     cd build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DBUILD_TESTS=OFF &&     cmake --build . --target demo --parallel $(nproc) &&     cmake --install . &&     ls -la /usr/local/bin/demo:                                                                             
+0.163 -- The CXX compiler identification is GNU 11.4.0                                                
+0.167 -- Detecting CXX compiler ABI info                                                              
+0.203 -- Detecting CXX compiler ABI info - done
+0.207 -- Check for working CXX compiler: /usr/bin/c++ - skipped
+0.207 -- Detecting CXX compile features
+0.207 -- Detecting CXX compile features - done
+0.208 -- Configuring done
+0.210 -- Generating done
+0.210 -- Build files have been written to: /app/build
+0.230 [ 25%] Building CXX object CMakeFiles/print.dir/print.cpp.o
+0.398 [ 50%] Linking CXX static library libprint.a
+0.410 [ 50%] Built target print
+0.417 [ 75%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o
+0.511 /app/demo/main.cpp: In function 'int main(int, char**)':
+0.511 /app/demo/main.cpp:16:19: error: variable 'std::ofstream out' has initializer but incomplete type
+0.511    16 |     std::ofstream out{log_path, std::ios_base::app};
+0.511       |                   ^~~
+0.524 gmake[3]: *** [CMakeFiles/demo.dir/build.make:76: CMakeFiles/demo.dir/demo/main.cpp.o] Error 1
+0.524 gmake[2]: *** [CMakeFiles/Makefile2:111: CMakeFiles/demo.dir/all] Error 2
+0.524 gmake[1]: *** [CMakeFiles/Makefile2:118: CMakeFiles/demo.dir/rule] Error 2
+0.524 gmake: *** [Makefile:182: demo] Error 2
+------
+Dockerfile:17
+--------------------
+  16 |     
+  17 | >>> RUN mkdir -p build && \
+  18 | >>>     cd build && \
+  19 | >>>     cmake .. \
+  20 | >>>     -DCMAKE_BUILD_TYPE=Release \
+  21 | >>>     -DBUILD_TESTS=OFF && \
+  22 | >>>     cmake --build . --target demo --parallel $(nproc) && \
+  23 | >>>     cmake --install . && \
+  24 | >>>     ls -la /usr/local/bin/demo
+  25 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c mkdir -p build &&     cd build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DBUILD_TESTS=OFF &&     cmake --build . --target demo --parallel $(nproc) &&     cmake --install . &&     ls -la /usr/local/bin/demo" did not complete successfully: exit code: 2
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ mkdir -p build && cd build
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ cmake .. -DBUILD_TESTS=OFF
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/KhotAbuch/workspace/lab08/build
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ cmake --build . --target demo
+[ 25%] Building CXX object CMakeFiles/print.dir/print.cpp.o
+[ 50%] Linking CXX static library libprint.a
+[ 50%] Built target print
+[ 75%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o
+/home/ubuntu/KhotAbuch/workspace/lab08/demo/main.cpp: In function ‘int main(int, char**)’:
+/home/ubuntu/KhotAbuch/workspace/lab08/demo/main.cpp:16:19: error: variable ‘std::ofstream out’ has initializer but incomplete type
+   16 |     std::ofstream out{log_path, std::ios_base::app};
+      |                   ^~~
+gmake[3]: *** [CMakeFiles/demo.dir/build.make:76: CMakeFiles/demo.dir/demo/main.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/Makefile2:111: CMakeFiles/demo.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:118: CMakeFiles/demo.dir/rule] Error 2
+gmake: *** [Makefile:182: demo] Error 2
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ cd ..
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > demo/main.cpp
+> #include "print.hpp"
+> #include <fstream> 
+> #include <string>
+
+int main(int argc, char* argv[]) {
+    const std::string log_path = "log.txt";
+>     print("Hello, console!");
+    
+    // Печать в файл
+    std::ofstream out(log_path, std::ios_base::app);
+    if (out.is_open()) {
+        print("Hello, file!", out);
+    }
+    
+    return 0;
+}
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > include/print.hpp
+#pragma once
+#include <string>
+#include <iostream>
+#include <ostream>
+
+void print(const std::string& text, std::ostream& out = std::cout);
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > print.cpp
+#include "print.hpp"
+
+void print(const std::string& text, std::ostream& out) {
+    out << text << std::endl;
+}
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf build _build _install
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ mkdir -p build && cd build
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ cmake .. -DBUILD_TESTS=OFF
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/KhotAbuch/workspace/lab08/build
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ cmake --build . --target demo
+[ 25%] Building CXX object CMakeFiles/print.dir/print.cpp.o
+[ 50%] Linking CXX static library libprint.a
+[ 50%] Built target print
+[ 75%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o
+[100%] Linking CXX executable demo
+[100%] Built target demo
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ cat << 'EOF' > Dockerfile
+FROM ubuntu:22.04
+
+RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make \
+    pkg-config && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY . .
+
+RUN mkdir -p build && \
+    cd build && \
+    cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DBUILD_TESTS=OFF && \
+    cmake --build . --target demo --parallel $(nproc) && \
+    cmake --install .
+
+RUN chmod +x /usr/local/bin/demo && \
+    mkdir -p /home/logs && \
+    chmod 777 /home/logs
+
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+WORKDIR /home/logs
+CMD ["/usr/local/bin/demo"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ docker build --no-cache -t logger .
+[+] Building 21.1s (10/12)                                                             docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 637B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  1.3s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                    0.0s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => CACHED [1/7] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879  0.0s
+ => [internal] load build context                                                                0.0s
+ => => transferring context: 362.68kB                                                            0.0s
+ => [2/7] RUN apt update && apt install -yy     gcc     g++     cmake     git     make     pkg  19.5s
+ => [3/7] WORKDIR /app                                                                           0.0s 
+ => [4/7] COPY . .                                                                               0.0s 
+ => ERROR [5/7] RUN mkdir -p build &&     cd build &&     cmake ..     -DCMAKE_BUILD_TYPE=Relea  0.2s 
+------                                                                                                
+ > [5/7] RUN mkdir -p build &&     cd build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DBUILD_TESTS=OFF &&     cmake --build . --target demo --parallel $(nproc) &&     cmake --install .:         
+0.161 CMake Error: The current CMakeCache.txt directory /app/CMakeCache.txt is different than the directory /home/ubuntu/KhotAbuch/workspace/lab08/build where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+------
+Dockerfile:17
+--------------------
+  16 |     
+  17 | >>> RUN mkdir -p build && \
+  18 | >>>     cd build && \
+  19 | >>>     cmake .. \
+  20 | >>>     -DCMAKE_BUILD_TYPE=Release \
+  21 | >>>     -DBUILD_TESTS=OFF && \
+  22 | >>>     cmake --build . --target demo --parallel $(nproc) && \
+  23 | >>>     cmake --install .
+  24 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c mkdir -p build &&     cd build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DBUILD_TESTS=OFF &&     cmake --build . --target demo --parallel $(nproc) &&     cmake --install ." did not complete successfully: exit code: 1
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08/build$ cd ..
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > Dockerfile
+FROM ubuntu:22.04
+
+# Установка зависимостей
+RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make \
+    pkg-config && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Рабочая директория
+WORKDIR /app
+
+# Копируем только необходимые файлы
+COPY CMakeLists.txt print.cpp demo/ include/ ./
+
+# Полная очистка перед сборкой
+RUN rm -rf /app/build /app/CMakeCache.txt /app/CMakeFiles
+
+# Сборка проекта
+RUN mkdir -p /app/build && \
+    cd /app/build && \
+    cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DBUILD_TESTS=OFF && \
+    cmake --build . --target demo --parallel $(nproc) && \
+    cmake --install .
+
+# Проверка что файл создан
+RUN test -f /usr/local/bin/demo || (echo "Error: demo executable not found!" && exit 1)
+
+# Настройка окружения
+RUN chmod +x /usr/local/bin/demo && \
+    mkdir -p /home/logs && \
+    chmod 777 /home/logs
+
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+WORKDIR /home/logs
+CMD ["/usr/local/bin/demo"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker system prune -f
+Deleted build cache objects:
+nurw90mkx3xe30rbja4srlkd6
+l1z6jevs6ehhaideilomc4r6k
+1b01ryke8a31a292gdb0jod98
+wtc09jf6t7xezqgxkbylb43i4
+d4mu74t2qeize5ahqi6awy533
+twg9swjovdjeulc1fb3ri7pyp
+vbbpncsn32px5r1i0jsqg1bae
+u4khqdkvybcyzb7ztkar7f5af
+7daq4u4rjnmzih4mppg9ghnbk
+sr563t4th7sj54hyzk8bg4viq
+waw44rmz1vjuv2ce9jvx4af8e
+cz63met5uvy6cofxy8iooz67n
+
+Total reclaimed space: 751.2MB
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf build _build _install CMakeCache.txt CMakeFiles
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build --no-cache -t logger .
+[+] Building 31.7s (10/13)                                                             docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 1.16kB                                                           0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  0.5s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => CACHED [1/9] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879  0.0s
+ => [internal] load build context                                                                0.0s
+ => => transferring context: 2.60kB                                                              0.0s
+ => [2/9] RUN apt update && apt install -yy     gcc     g++     cmake     git     make     pkg  30.7s
+ => [3/9] WORKDIR /app                                                                           0.0s 
+ => [4/9] COPY CMakeLists.txt print.cpp demo/ include/ ./                                        0.0s 
+ => [5/9] RUN rm -rf /app/build /app/CMakeCache.txt /app/CMakeFiles                              0.1s 
+ => ERROR [6/9] RUN mkdir -p /app/build &&     cd /app/build &&     cmake ..     -DCMAKE_BUILD_  0.2s 
+------                                                                                                
+ > [6/9] RUN mkdir -p /app/build &&     cd /app/build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DBUILD_TESTS=OFF &&     cmake --build . --target demo --parallel $(nproc) &&     cmake --install .:
+0.142 -- The CXX compiler identification is GNU 11.4.0
+0.145 -- Detecting CXX compiler ABI info
+0.178 -- Detecting CXX compiler ABI info - done
+0.182 -- Check for working CXX compiler: /usr/bin/c++ - skipped
+0.182 -- Detecting CXX compile features
+0.182 -- Detecting CXX compile features - done
+0.183 -- Configuring done
+0.183 CMake Error at CMakeLists.txt:18 (add_executable):
+0.183   Cannot find source file:
+0.183 
+0.183     demo/main.cpp
+0.183 
+0.183   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+0.183   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+0.183 
+0.183 
+0.184 CMake Error at CMakeLists.txt:18 (add_executable):
+0.184   No SOURCES given to target: demo
+0.184 
+0.184 
+0.184 CMake Generate step failed.  Build files cannot be regenerated correctly.
+------
+Dockerfile:24
+--------------------
+  23 |     # Сборка проекта
+  24 | >>> RUN mkdir -p /app/build && \
+  25 | >>>     cd /app/build && \
+  26 | >>>     cmake .. \
+  27 | >>>     -DCMAKE_BUILD_TYPE=Release \
+  28 | >>>     -DBUILD_TESTS=OFF && \
+  29 | >>>     cmake --build . --target demo --parallel $(nproc) && \
+  30 | >>>     cmake --install .
+  31 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c mkdir -p /app/build &&     cd /app/build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release     -DBUILD_TESTS=OFF &&     cmake --build . --target demo --parallel $(nproc) &&     cmake --install ." did not complete successfully: exit code: 1
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > Dockerfile
+FROM ubuntu:22.04
+
+# Установка зависимостей
+RUN apt update && apt install -yy \
+    gcc \
+    g++ \
+    cmake \
+    git \
+    make \
+    pkg-config && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Рабочая директория
+WORKDIR /app
+
+# Копируем всю структуру проекта
+COPY . .
+
+# Очистка перед сборкой
+RUN rm -rf build CMakeCache.txt CMakeFiles
+
+# Сборка проекта
+RUN mkdir -p build && \
+    cd build && \
+    cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DBUILD_TESTS=OFF && \
+    cmake --build . --target demo --parallel $(nproc) && \
+    cmake --install .
+
+# Проверка
+RUN test -f /usr/local/bin/demo || (echo "Error: demo executable not found!" && exit 1)
+
+# Настройка окружения
+RUN chmod +x /usr/local/bin/demo && \
+    mkdir -p /home/logs && \
+    chmod 777 /home/logs
+
+ENV LOG_PATH=/home/logs/log.txt
+VOLUME /home/logs
+
+WORKDIR /home/logs
+CMD ["/usr/local/bin/demo"]
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker system prune -f
+Deleted build cache objects:
+gsmf6d145dr9nzysfsdo44dnb
+75vi2mhvret59rgbf6ppfra06
+x2y4jj1brhjkr4iyob2br408l
+6v4wjjjhzw961sk65mbt87msg
+uyg15btfec2bconjnadef5qtj
+o7hmqef5jlfdz1je42v30lfef
+omtpxg2yvvrzqjzo19cjz8ltw
+
+Total reclaimed space: 348.6MB
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ rm -rf build CMakeCache.txt CMakeFiles
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build --no-cache -t logger .
+[+] Building 23.4s (14/14) FINISHED                                                    docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 1.05kB                                                           0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  0.5s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => CACHED [1/9] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879  0.0s
+ => [internal] load build context                                                                0.2s
+ => => transferring context: 26.70MB                                                             0.2s
+ => [2/9] RUN apt update && apt install -yy     gcc     g++     cmake     git     make     pkg  20.8s
+ => [3/9] WORKDIR /app                                                                           0.0s 
+ => [4/9] COPY . .                                                                               0.1s 
+ => [5/9] RUN rm -rf build CMakeCache.txt CMakeFiles                                             0.2s 
+ => [6/9] RUN mkdir -p build &&     cd build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release      0.5s 
+ => [7/9] RUN test -f /usr/local/bin/demo || (echo "Error: demo executable not found!" && exit   0.1s 
+ => [8/9] RUN chmod +x /usr/local/bin/demo &&     mkdir -p /home/logs &&     chmod 777 /home/lo  0.1s 
+ => [9/9] WORKDIR /home/logs                                                                     0.0s 
+ => exporting to image                                                                           0.8s 
+ => => exporting layers                                                                          0.8s 
+ => => writing image sha256:b34dea71d8c5f4667eab082505358d7e38fb15055a9f88d80d4717ede32f31dd     0.0s 
+ => => naming to docker.io/library/logger                                                        0.0s
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker run -it --rm -v "$(pwd)/logs:/home/logs" logger
+Hello, console!
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ text1
+text2
+text3
+<C-D>
+text1: command not found
+text2: command not found
+text3: command not found
+-bash: syntax error near unexpected token `newline'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker run -it -v "$(pwd)/logs/:/home/logs/" logger
+text1
+text2
+text3
+<C-D>
+Hello, console!
+text1: command not found
+text2: command not found
+text3: command not found
+-bash: syntax error near unexpected token `newline'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat logs/log.txt
+Hello, file!
+Hello, file!
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > demo/main.cpp
+#include "print.hpp"
+#include <fstream>
+#include <string>
+#include <iostream>
+
+int main() {
+    const std::string log_path = "/home/logs/log.txt";
+    
+    // Печать в консоль
+    print("Enter text (Ctrl+D to finish):");
+    
+    // Печать в файл и консоль
+    std::ofstream out(log_path, std::ios_base::app);
+    if (out.is_open()) {
+        std::string line;
+        while (std::getline(std::cin, line)) {
+            print(line);            // В консоль
+            print(line, out);       // В файл
+        }
+    }
+    
+    return 0;
+}
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build --no-cache -t logger .
+[+] Building 23.8s (15/15) FINISHED                                                    docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 1.05kB                                                           0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  0.9s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                    0.0s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => CACHED [1/9] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879  0.0s
+ => [internal] load build context                                                                0.1s
+ => => transferring context: 89.87kB                                                             0.0s
+ => [2/9] RUN apt update && apt install -yy     gcc     g++     cmake     git     make     pkg  20.8s
+ => [3/9] WORKDIR /app                                                                           0.0s 
+ => [4/9] COPY . .                                                                               0.2s 
+ => [5/9] RUN rm -rf build CMakeCache.txt CMakeFiles                                             0.1s 
+ => [6/9] RUN mkdir -p build &&     cd build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release      0.5s 
+ => [7/9] RUN test -f /usr/local/bin/demo || (echo "Error: demo executable not found!" && exit   0.1s 
+ => [8/9] RUN chmod +x /usr/local/bin/demo &&     mkdir -p /home/logs &&     chmod 777 /home/lo  0.1s 
+ => [9/9] WORKDIR /home/logs                                                                     0.0s 
+ => exporting to image                                                                           0.8s 
+ => => exporting layers                                                                          0.8s 
+ => => writing image sha256:0509d450beceb5fe3c10c287ed64d516c8a66db93a38be647226724084406d82     0.0s 
+ => => naming to docker.io/library/logger                                                        0.0s
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker run -it -v "$(pwd)/logs/:/home/logs/" logger
+text1
+text2
+text3
+<C-D>
+Enter text (Ctrl+D to finish):
+abba
+?abba
+s
+s
+sa
+sa
+^C
+
+^X
+
+
+
+d
+d
+'
+'
+:
+:
+"
+"
+text1: command not found
+text2: command not found
+text3: command not found
+-bash: syntax error near unexpected token `newline'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker run -it -v "$(pwd)/logs/:/home/logs/" logger
+text1
+text2
+text3
+<C-D>
+Enter text (Ctrl+D to finish):
+hi
+hi
+world
+world
+text1: command not found
+text2: command not found
+text3: command not found
+-bash: syntax error near unexpected token `newline'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > demo/main.cpp
+#include "print.hpp"
+#include <fstream>
+#include <string>
+#include <iostream>
+
+int main() {
+    const std::string log_path = "/home/logs/log.txt";
+    
+    std::ofstream out(log_path, std::ios_base::app);
+    if (!out.is_open()) {
+        print("Error: Could not open log file!");
+        return 1;
+    }
+
+    std::string line;
+    while (std::getline(std::cin, line)) {
+>         print(line);        
+>         out << line << "\n"; 
+>       out.flush();
+>    }
+    
+    return 0;
+}
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ nano Dockerfile
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat << 'EOF' > demo/main.cpp
+#include "print.hpp"
+#include <fstream>
+#include <iostream>
+#include <string>
+
+int main() {
+    const std::string log_path = "/home/logs/log.txt";
+    std::ofstream log_file(log_path, std::ios::app);
+    
+    if (!log_file.is_open()) {
+        std::cerr << "Error opening log file!" << std::endl;
+        return 1;
+    }
+
+    std::string line;
+    while (std::getline(std::cin, line)) {
+        // Вывод в консоль
+        std::cout << "Received: " << line << std::endl;
+        // Запись в лог-файл
+        log_file << line << std::endl;
+    }
+
+    return 0;
+}
+EOF
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker build --no-cache -t logger .
+[+] Building 23.9s (14/14) FINISHED                                                    docker:default
+ => [internal] load build definition from Dockerfile                                             0.0s
+ => => transferring dockerfile: 1.06kB                                                           0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:22.04                                  0.5s
+ => [internal] load .dockerignore                                                                0.0s
+ => => transferring context: 2B                                                                  0.0s
+ => CACHED [1/9] FROM docker.io/library/ubuntu:22.04@sha256:01a3ee0b5e413cefaaffc6abe68c9c37879  0.0s
+ => [internal] load build context                                                                0.1s
+ => => transferring context: 90.94kB                                                             0.0s
+ => [2/9] RUN apt update && apt install -yy     gcc     g++     cmake     git     make     pkg  21.2s
+ => [3/9] WORKDIR /app                                                                           0.0s 
+ => [4/9] COPY . .                                                                               0.2s 
+ => [5/9] RUN rm -rf build CMakeCache.txt CMakeFiles                                             0.1s 
+ => [6/9] RUN mkdir -p build &&     cd build &&     cmake ..     -DCMAKE_BUILD_TYPE=Release      0.6s 
+ => [7/9] RUN test -f /usr/local/bin/demo || (echo "Error: demo executable not found!" && exit   0.1s 
+ => [8/9] RUN chmod +x /usr/local/bin/demo &&     mkdir -p /home/logs &&     chmod 777 /home/lo  0.1s 
+ => [9/9] WORKDIR /usr/local/bin                                                                 0.0s 
+ => exporting to image                                                                           0.9s 
+ => => exporting layers                                                                          0.9s 
+ => => writing image sha256:8e9e6a00e035c81a71a556313373b4d27456b07dbb98aaf6d6fe63240f8665e6     0.0s 
+ => => naming to docker.io/library/logger                                                        0.0s
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ echo -e "test1\ntest2" | docker run -i --rm -v "$(pwd)/logs:/home/logs" logger
+Received: test1
+Received: test2
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ cat logs/log.txt
+Hello, file!
+Hello, file!
+?abba
+s
+sa
+
+
+
+d
+'
+:
+"
+hi
+world
+test1
+test2
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker run -it -v "$(pwd)/logs/:/home/logs/" logger
+text1
+text2
+text3
+<C-D>
+text1: command not found
+text2: command not found
+text3: command not found
+-bash: syntax error near unexpected token `newline'
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ docker inspect logger
+[
+    {
+        "Id": "sha256:8e9e6a00e035c81a71a556313373b4d27456b07dbb98aaf6d6fe63240f8665e6",
+        "RepoTags": [
+            "logger:latest"
+        ],
+        "RepoDigests": [],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-06-08T04:42:41.093782247+03:00",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LOG_PATH=/home/logs/log.txt"
+            ],
+            "Cmd": null,
+            "Image": "",
+            "Volumes": {
+                "/home/logs": {}
+            },
+            "WorkingDir": "/usr/local/bin",
+            "Entrypoint": [
+                "/usr/local/bin/demo"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 444618913,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/cchps25by8f0e8otsjr3mlyvz/diff:/var/lib/docker/overlay2/owaj70xxzew1zxv2mcm2lgb0t/diff:/var/lib/docker/overlay2/x85ei527ngm9vcgpopqe73cis/diff:/var/lib/docker/overlay2/q3t4hbfwfojl2owv0tujfrk17/diff:/var/lib/docker/overlay2/m2ki9xo0zjsdax8bhigopn482/diff:/var/lib/docker/overlay2/q22y61ezocuoia0oxyibpxncg/diff:/var/lib/docker/overlay2/ggzffkmf79prmeqktjdm79ocd/diff:/var/lib/docker/overlay2/e3c4188afc2ace7d3c41a5940db21fa93775e26a7765fa7367fc004bb5294010/diff",
+                "MergedDir": "/var/lib/docker/overlay2/s5u2m5pxkpxlt2kj6tou2i3w3/merged",
+                "UpperDir": "/var/lib/docker/overlay2/s5u2m5pxkpxlt2kj6tou2i3w3/diff",
+                "WorkDir": "/var/lib/docker/overlay2/s5u2m5pxkpxlt2kj6tou2i3w3/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:1e7a4fd46befdfdb6bd98a60dada1bd3be4776c5732812530c91ee5be8e96727",
+                "sha256:bf78dc5852ff43e2d23e19714ad0bde397e7e08d40f476ee8566591b34e9ed54",
+                "sha256:4d54eb67d541df94050c4cccd2a2a726adc6fa729a4ee0c3f254a0e3bd314023",
+                "sha256:e137b96401ce11c5bb46847bff8b0f1551d9efaf3ae7ab109a37e580534fe316",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:cea64b161dbe3d740a99a7d273bf8253378e6032448b7b514f082987d2bbcb0d",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:d9fc2817007a284c4741b8ef4090057e9d493cb2e9fb1ba2cb92f390bb3dedb2",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2025-06-08T04:42:42.008752607+03:00"
+        }
+    }
+]
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ sed -i 's/lab07/lab08/g' README.md
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ vim .travis.yml
+/lang<CR>o
+services:
+- docker<ESC>
+jVGdo
+script:
+- docker build -t logger .<ESC>
+:wq
+-bash: CR: No such file or directory
+services:: command not found
+-bash: syntax error near unexpected token `newline'
+jVGdo: command not found
+Command 'script:' not found, did you mean:
+  command 'script6' from deb ipv6toolkit (2.0+ds.1-2)
+  command 'script' from deb bsdutils (1:2.39.3-9ubuntu6.2)
+Try: sudo apt install <deb name>
+-bash: syntax error near unexpected token `newline'
+:wq: command not found
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git add Dockerfile
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git add .travis.yml
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git commit -m"adding Dockerfile"
+[main 9607427] adding Dockerfile
+ 1 file changed, 44 insertions(+)
+ create mode 100644 Dockerfile
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ git push origin main
+Username for 'https://github.com': KhotAbuch
+Password for 'https://KhotAbuch@github.com': 
+Enumerating objects: 578, done.
+Counting objects: 100% (578/578), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (249/249), done.
+Writing objects: 100% (578/578), 3.23 MiB | 5.97 MiB/s, done.
+Total 578 (delta 285), reused 568 (delta 282), pack-reused 0
+remote: Resolving deltas: 100% (285/285), done.
+To https://github.com/KhotAbuch/lab08
+ * [new branch]      main -> main
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ travis login --auto
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+Successfully logged in as KhotAbuch!
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ travis enable
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+Detected repository as KhotAbuch/lab08, is this correct? |yes| y
+KhotAbuch/lab08: enabled :)
+ubuntu@Ubuntu-GUI:~/KhotAbuch/workspace/lab08$ 
