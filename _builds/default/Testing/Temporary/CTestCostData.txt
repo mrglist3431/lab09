@@ -1,3 +1,0 @@
-PrintTest.BasicTest 1 0.00122287
-PrintTest.DefaultStreamTest 1 0.00119391
----
