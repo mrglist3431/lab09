@@ -1,0 +1,5 @@
+add_test([=[PrintTest.BasicTest]=]  /home/ubuntu/KhotAbuch/workspace/projects/lab09/_build/check [==[--gtest_filter=PrintTest.BasicTest]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PrintTest.BasicTest]=]  PROPERTIES WORKING_DIRECTORY /home/ubuntu/KhotAbuch/workspace/projects/lab09/_build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[PrintTest.DefaultStreamTest]=]  /home/ubuntu/KhotAbuch/workspace/projects/lab09/_build/check [==[--gtest_filter=PrintTest.DefaultStreamTest]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PrintTest.DefaultStreamTest]=]  PROPERTIES WORKING_DIRECTORY /home/ubuntu/KhotAbuch/workspace/projects/lab09/_build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  check_TESTS PrintTest.BasicTest PrintTest.DefaultStreamTest)

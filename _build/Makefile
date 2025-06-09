@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/KhotAbuch/workspace/projects/lab06
+CMAKE_SOURCE_DIR = /home/ubuntu/KhotAbuch/workspace/projects/lab09
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/KhotAbuch/workspace/projects/lab06/_build
+CMAKE_BINARY_DIR = /home/ubuntu/KhotAbuch/workspace/projects/lab09/_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,12 +78,22 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/KhotAbuch/workspace/projects/lab06/_build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/KhotAbuch/workspace/projects/lab09/_build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
 package_source/fast: package_source
 .PHONY : package_source/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -152,9 +162,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/KhotAbuch/workspace/projects/lab06/_build/CMakeFiles /home/ubuntu/KhotAbuch/workspace/projects/lab06/_build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/KhotAbuch/workspace/projects/lab09/_build/CMakeFiles /home/ubuntu/KhotAbuch/workspace/projects/lab09/_build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/KhotAbuch/workspace/projects/lab06/_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/KhotAbuch/workspace/projects/lab09/_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -194,29 +204,118 @@ print/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/build
 .PHONY : print/fast
 
-sources/print.o: sources/print.cpp.o
-.PHONY : sources/print.o
+#=============================================================================
+# Target rules for targets named check
+
+# Build rule for target.
+check: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 check
+.PHONY : check
+
+# fast build rule for target.
+check/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/build
+.PHONY : check/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+print.o: print.cpp.o
+.PHONY : print.o
 
 # target to build an object file
-sources/print.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/sources/print.cpp.o
-.PHONY : sources/print.cpp.o
+print.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/print.cpp.o
+.PHONY : print.cpp.o
 
-sources/print.i: sources/print.cpp.i
-.PHONY : sources/print.i
+print.i: print.cpp.i
+.PHONY : print.i
 
 # target to preprocess a source file
-sources/print.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/sources/print.cpp.i
-.PHONY : sources/print.cpp.i
+print.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/print.cpp.i
+.PHONY : print.cpp.i
 
-sources/print.s: sources/print.cpp.s
-.PHONY : sources/print.s
+print.s: print.cpp.s
+.PHONY : print.s
 
 # target to generate assembly for a file
-sources/print.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/sources/print.cpp.s
-.PHONY : sources/print.cpp.s
+print.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/print.dir/build.make CMakeFiles/print.dir/print.cpp.s
+.PHONY : print.cpp.s
+
+tests/test1.o: tests/test1.cpp.o
+.PHONY : tests/test1.o
+
+# target to build an object file
+tests/test1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/tests/test1.cpp.o
+.PHONY : tests/test1.cpp.o
+
+tests/test1.i: tests/test1.cpp.i
+.PHONY : tests/test1.i
+
+# target to preprocess a source file
+tests/test1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/tests/test1.cpp.i
+.PHONY : tests/test1.cpp.i
+
+tests/test1.s: tests/test1.cpp.s
+.PHONY : tests/test1.s
+
+# target to generate assembly for a file
+tests/test1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/tests/test1.cpp.s
+.PHONY : tests/test1.cpp.s
 
 # Help Target
 help:
@@ -232,10 +331,19 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... check"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... print"
-	@echo "... sources/print.o"
-	@echo "... sources/print.i"
-	@echo "... sources/print.s"
+	@echo "... print.o"
+	@echo "... print.i"
+	@echo "... print.s"
+	@echo "... tests/test1.o"
+	@echo "... tests/test1.i"
+	@echo "... tests/test1.s"
 .PHONY : help
 
 
